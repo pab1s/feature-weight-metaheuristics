@@ -1,0 +1,38 @@
+\hypertarget{main_8cpp}{}\doxysection{src/main.cpp File Reference}
+\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include \char`\"{}algorithms/\+Algorithm\+Factory.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}data/\+Data\+Loader.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}data/\+Data\+Set.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils/\+Utils.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils/\+Random\+Utils.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Evaluation.\+hpp\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_a7a0469dd1fd0939dbcb5101dd0d9066c}{process\+Fold}} (std\+::ofstream \&csv\+File, const std\+::string \&dataset\+Name, size\+\_\+t fold, const Data\+Set \&train, const Data\+Set \&test, std\+::shared\+\_\+ptr$<$ Evaluation $>$ eval, std\+::unique\+\_\+ptr$<$ Algorithm $>$ algorithm, const std\+::string \&algorithm\+Name, unsigned seed, const std\+::string \&results\+Filename, bool log\+Results)
+\item 
+int \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_a7a0469dd1fd0939dbcb5101dd0d9066c}\label{main_8cpp_a7a0469dd1fd0939dbcb5101dd0d9066c}} 
+\index{main.cpp@{main.cpp}!processFold@{processFold}}
+\index{processFold@{processFold}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{processFold()}{processFold()}}
+{\footnotesize\ttfamily void process\+Fold (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{csv\+File,  }\item[{const std\+::string \&}]{dataset\+Name,  }\item[{size\+\_\+t}]{fold,  }\item[{const Data\+Set \&}]{train,  }\item[{const Data\+Set \&}]{test,  }\item[{std\+::shared\+\_\+ptr$<$ Evaluation $>$}]{eval,  }\item[{std\+::unique\+\_\+ptr$<$ Algorithm $>$}]{algorithm,  }\item[{const std\+::string \&}]{algorithm\+Name,  }\item[{unsigned}]{seed,  }\item[{const std\+::string \&}]{results\+Filename,  }\item[{bool}]{log\+Results }\end{DoxyParamCaption})}
+

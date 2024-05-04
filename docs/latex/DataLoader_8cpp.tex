@@ -1,0 +1,46 @@
+\hypertarget{DataLoader_8cpp}{}\doxysection{src/data/\+Data\+Loader.cpp File Reference}
+\label{DataLoader_8cpp}\index{src/data/DataLoader.cpp@{src/data/DataLoader.cpp}}
+{\ttfamily \#include \char`\"{}data/\+Data\+Loader.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cctype$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceDataLoader}{Data\+Loader}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{DataLoader_8cpp_ad8200839a864ebdf2f129fbffa33967b}{to\+Lower\+Case}} (const std\+::string \&str)
+\item 
+std\+::string \mbox{\hyperlink{DataLoader_8cpp_a587383969d2ef5be896037771e6b4cc9}{normalize\+Class\+Label}} (const std\+::string \&class\+Label)
+\item 
+bool \mbox{\hyperlink{namespaceDataLoader_ad3cc21d2d1244de6fd2ec84993c3f462}{Data\+Loader\+::read\+ARFF}} (const std\+::string \&filename, Data\+Set \&dataset)
+\item 
+Data\+Item \mbox{\hyperlink{namespaceDataLoader_a164776e0fd9d73b5b90a569d823ddb99}{Data\+Loader\+::find\+Max\+Feature\+Values}} (const Data\+Set \&dataset)
+\item 
+Data\+Item \mbox{\hyperlink{namespaceDataLoader_af6ceaed90628e667705f8d778311d37a}{Data\+Loader\+::find\+Min\+Feature\+Values}} (const Data\+Set \&dataset)
+\item 
+void \mbox{\hyperlink{namespaceDataLoader_a6c4a949de3857c4e83b0a6fe60e9d4b6}{Data\+Loader\+::normalize\+Features}} (Data\+Set \&dataset, const Data\+Item \&min\+Feature\+Value, const Data\+Item \&max\+Feature\+Value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{DataLoader_8cpp_a587383969d2ef5be896037771e6b4cc9}\label{DataLoader_8cpp_a587383969d2ef5be896037771e6b4cc9}} 
+\index{DataLoader.cpp@{DataLoader.cpp}!normalizeClassLabel@{normalizeClassLabel}}
+\index{normalizeClassLabel@{normalizeClassLabel}!DataLoader.cpp@{DataLoader.cpp}}
+\doxysubsubsection{\texorpdfstring{normalizeClassLabel()}{normalizeClassLabel()}}
+{\footnotesize\ttfamily std\+::string normalize\+Class\+Label (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{class\+Label }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{DataLoader_8cpp_ad8200839a864ebdf2f129fbffa33967b}\label{DataLoader_8cpp_ad8200839a864ebdf2f129fbffa33967b}} 
+\index{DataLoader.cpp@{DataLoader.cpp}!toLowerCase@{toLowerCase}}
+\index{toLowerCase@{toLowerCase}!DataLoader.cpp@{DataLoader.cpp}}
+\doxysubsubsection{\texorpdfstring{toLowerCase()}{toLowerCase()}}
+{\footnotesize\ttfamily std\+::string to\+Lower\+Case (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+

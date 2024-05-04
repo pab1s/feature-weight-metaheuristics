@@ -1,0 +1,38 @@
+\hypertarget{Utils_8cpp}{}\doxysection{src/utils/\+Utils.cpp File Reference}
+\label{Utils_8cpp}\index{src/utils/Utils.cpp@{src/utils/Utils.cpp}}
+{\ttfamily \#include \char`\"{}utils/\+Utils.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include \char`\"{}utils/json.\+hpp\char`\"{}}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceUtils}{Utils}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{Utils_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} = nlohmann\+::json
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{namespaceUtils_a9f53f378ee1aaa250da49d7692a94cda}{Utils\+::generate\+Filename}} (const std\+::string \&base\+Name, const std\+::string \&extension)
+\item 
+void \mbox{\hyperlink{namespaceUtils_a2174cbb2041ca04d5b766f97d98a6725}{Utils\+::log\+Result}} (size\+\_\+t fold, float classification\+Rate\+Train, float classification\+Rate\+Test, float reduction\+Rate, float fitness, double duration, unsigned seed, const std\+::string \&solution\+ID, const std\+::string \&results\+Filename)
+\item 
+std\+::string \mbox{\hyperlink{namespaceUtils_aa801a9ef438458119fe28186f4f08089}{Utils\+::save\+Solution\+To\+JSON}} (const std\+::vector$<$ float $>$ \&solution)
+\item 
+void \mbox{\hyperlink{namespaceUtils_a9362d26f5b46f663ceb40c4c94ffd324}{Utils\+::save\+Fitness\+Records}} (const std\+::string \&filename, const std\+::vector$<$ float $>$ \&fitness\+Records)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{Utils_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}\label{Utils_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}} 
+\index{Utils.cpp@{Utils.cpp}!json@{json}}
+\index{json@{json}!Utils.cpp@{Utils.cpp}}
+\doxysubsubsection{\texorpdfstring{json}{json}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{Utils_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} =  nlohmann\+::json}
+

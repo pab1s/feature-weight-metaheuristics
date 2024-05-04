@@ -1,0 +1,6 @@
+PROJECT_NAME           = "Metaheuristics"
+OUTPUT_DIRECTORY       = docs
+INPUT                  = src include
+FILE_PATTERNS          = *.cpp *.h
+RECURSIVE              = YES
+EXTRACT_ALL            = YES

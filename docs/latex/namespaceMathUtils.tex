@@ -1,0 +1,96 @@
+\hypertarget{namespaceMathUtils}{}\doxysection{Math\+Utils Namespace Reference}
+\label{namespaceMathUtils}\index{MathUtils@{MathUtils}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::set$<$ int $>$ \mbox{\hyperlink{namespaceMathUtils_a8bfe0f5d5b7a56653a15963ad3337e40}{get\+Categorical\+Indexes}} (const std\+::vector$<$ float $>$ \&v)
+\item 
+float \mbox{\hyperlink{namespaceMathUtils_a618b453afcdb98a2bda692335dd49bda}{normalize}} (float value, float min, float max)
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{namespaceMathUtils_a92de779c48350c44454125cc70377a13}{normalize}} (const std\+::vector$<$ float $>$ \&values, const std\+::vector$<$ float $>$ \&min\+Values, const std\+::vector$<$ float $>$ \&max\+Values)
+\item 
+void \mbox{\hyperlink{namespaceMathUtils_a92300d90bea0482197f0144e4537cfe1}{normalize\+Weights}} (std\+::vector$<$ float $>$ \&weights)
+\item 
+float \mbox{\hyperlink{namespaceMathUtils_afc7a3eb28f6c34cc034fee7b8de487a9}{hamming\+Distance}} (const std\+::vector$<$ float $>$ \&v1, const std\+::vector$<$ float $>$ \&v2)
+\item 
+float \mbox{\hyperlink{namespaceMathUtils_a44d05e41fbd644a18e06e1d4de2eb25b}{weighted\+Hamming\+Distance}} (const std\+::vector$<$ float $>$ \&v1, const std\+::vector$<$ float $>$ \&v2, const std\+::vector$<$ float $>$ \&weights)
+\item 
+float \mbox{\hyperlink{namespaceMathUtils_a9fbe478cc831f0d8601b89e4f15c4301}{minkowski\+Distance}} (const std\+::vector$<$ float $>$ \&v1, const std\+::vector$<$ float $>$ \&v2, float p)
+\item 
+float \mbox{\hyperlink{namespaceMathUtils_ad549b2fe4f2d1d63c7de1b7a5dd2e3b0}{weighted\+Minkowski\+Distance}} (const std\+::vector$<$ float $>$ \&v1, const std\+::vector$<$ float $>$ \&v2, const std\+::vector$<$ float $>$ \&weights, float p)
+\item 
+float \mbox{\hyperlink{namespaceMathUtils_aa643f566df5a5da0878434121aaab5ef}{calculate\+Distance}} (const std\+::vector$<$ float $>$ \&v1, const std\+::vector$<$ float $>$ \&v2, const std\+::vector$<$ float $>$ \&weights, float p)
+\item 
+float \mbox{\hyperlink{namespaceMathUtils_a8c19da01858cb65eda0f58aad182d910}{weighted\+Euclidean\+Distance}} (const std\+::vector$<$ float $>$ \&v1, const std\+::vector$<$ float $>$ \&v2, const std\+::vector$<$ float $>$ \&weights)
+\item 
+float \mbox{\hyperlink{namespaceMathUtils_aa2184ba33ac025edf81e09939e70ffc7}{euclidean\+Distance}} (const std\+::vector$<$ float $>$ \&v1, const std\+::vector$<$ float $>$ \&v2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceMathUtils_aa643f566df5a5da0878434121aaab5ef}\label{namespaceMathUtils_aa643f566df5a5da0878434121aaab5ef}} 
+\index{MathUtils@{MathUtils}!calculateDistance@{calculateDistance}}
+\index{calculateDistance@{calculateDistance}!MathUtils@{MathUtils}}
+\doxysubsubsection{\texorpdfstring{calculateDistance()}{calculateDistance()}}
+{\footnotesize\ttfamily float Math\+Utils\+::calculate\+Distance (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{v1,  }\item[{const std\+::vector$<$ float $>$ \&}]{v2,  }\item[{const std\+::vector$<$ float $>$ \&}]{weights,  }\item[{float}]{p }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceMathUtils_aa2184ba33ac025edf81e09939e70ffc7}\label{namespaceMathUtils_aa2184ba33ac025edf81e09939e70ffc7}} 
+\index{MathUtils@{MathUtils}!euclideanDistance@{euclideanDistance}}
+\index{euclideanDistance@{euclideanDistance}!MathUtils@{MathUtils}}
+\doxysubsubsection{\texorpdfstring{euclideanDistance()}{euclideanDistance()}}
+{\footnotesize\ttfamily float Math\+Utils\+::euclidean\+Distance (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{v1,  }\item[{const std\+::vector$<$ float $>$ \&}]{v2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceMathUtils_a8bfe0f5d5b7a56653a15963ad3337e40}\label{namespaceMathUtils_a8bfe0f5d5b7a56653a15963ad3337e40}} 
+\index{MathUtils@{MathUtils}!getCategoricalIndexes@{getCategoricalIndexes}}
+\index{getCategoricalIndexes@{getCategoricalIndexes}!MathUtils@{MathUtils}}
+\doxysubsubsection{\texorpdfstring{getCategoricalIndexes()}{getCategoricalIndexes()}}
+{\footnotesize\ttfamily std\+::set$<$ int $>$ Math\+Utils\+::get\+Categorical\+Indexes (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceMathUtils_afc7a3eb28f6c34cc034fee7b8de487a9}\label{namespaceMathUtils_afc7a3eb28f6c34cc034fee7b8de487a9}} 
+\index{MathUtils@{MathUtils}!hammingDistance@{hammingDistance}}
+\index{hammingDistance@{hammingDistance}!MathUtils@{MathUtils}}
+\doxysubsubsection{\texorpdfstring{hammingDistance()}{hammingDistance()}}
+{\footnotesize\ttfamily float Math\+Utils\+::hamming\+Distance (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{v1,  }\item[{const std\+::vector$<$ float $>$ \&}]{v2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceMathUtils_a9fbe478cc831f0d8601b89e4f15c4301}\label{namespaceMathUtils_a9fbe478cc831f0d8601b89e4f15c4301}} 
+\index{MathUtils@{MathUtils}!minkowskiDistance@{minkowskiDistance}}
+\index{minkowskiDistance@{minkowskiDistance}!MathUtils@{MathUtils}}
+\doxysubsubsection{\texorpdfstring{minkowskiDistance()}{minkowskiDistance()}}
+{\footnotesize\ttfamily float Math\+Utils\+::minkowski\+Distance (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{v1,  }\item[{const std\+::vector$<$ float $>$ \&}]{v2,  }\item[{float}]{p }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceMathUtils_a92de779c48350c44454125cc70377a13}\label{namespaceMathUtils_a92de779c48350c44454125cc70377a13}} 
+\index{MathUtils@{MathUtils}!normalize@{normalize}}
+\index{normalize@{normalize}!MathUtils@{MathUtils}}
+\doxysubsubsection{\texorpdfstring{normalize()}{normalize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ float $>$ Math\+Utils\+::normalize (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{values,  }\item[{const std\+::vector$<$ float $>$ \&}]{min\+Values,  }\item[{const std\+::vector$<$ float $>$ \&}]{max\+Values }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceMathUtils_a618b453afcdb98a2bda692335dd49bda}\label{namespaceMathUtils_a618b453afcdb98a2bda692335dd49bda}} 
+\index{MathUtils@{MathUtils}!normalize@{normalize}}
+\index{normalize@{normalize}!MathUtils@{MathUtils}}
+\doxysubsubsection{\texorpdfstring{normalize()}{normalize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily float Math\+Utils\+::normalize (\begin{DoxyParamCaption}\item[{float}]{value,  }\item[{float}]{min,  }\item[{float}]{max }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceMathUtils_a92300d90bea0482197f0144e4537cfe1}\label{namespaceMathUtils_a92300d90bea0482197f0144e4537cfe1}} 
+\index{MathUtils@{MathUtils}!normalizeWeights@{normalizeWeights}}
+\index{normalizeWeights@{normalizeWeights}!MathUtils@{MathUtils}}
+\doxysubsubsection{\texorpdfstring{normalizeWeights()}{normalizeWeights()}}
+{\footnotesize\ttfamily void Math\+Utils\+::normalize\+Weights (\begin{DoxyParamCaption}\item[{std\+::vector$<$ float $>$ \&}]{weights }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceMathUtils_a8c19da01858cb65eda0f58aad182d910}\label{namespaceMathUtils_a8c19da01858cb65eda0f58aad182d910}} 
+\index{MathUtils@{MathUtils}!weightedEuclideanDistance@{weightedEuclideanDistance}}
+\index{weightedEuclideanDistance@{weightedEuclideanDistance}!MathUtils@{MathUtils}}
+\doxysubsubsection{\texorpdfstring{weightedEuclideanDistance()}{weightedEuclideanDistance()}}
+{\footnotesize\ttfamily float Math\+Utils\+::weighted\+Euclidean\+Distance (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{v1,  }\item[{const std\+::vector$<$ float $>$ \&}]{v2,  }\item[{const std\+::vector$<$ float $>$ \&}]{weights }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceMathUtils_a44d05e41fbd644a18e06e1d4de2eb25b}\label{namespaceMathUtils_a44d05e41fbd644a18e06e1d4de2eb25b}} 
+\index{MathUtils@{MathUtils}!weightedHammingDistance@{weightedHammingDistance}}
+\index{weightedHammingDistance@{weightedHammingDistance}!MathUtils@{MathUtils}}
+\doxysubsubsection{\texorpdfstring{weightedHammingDistance()}{weightedHammingDistance()}}
+{\footnotesize\ttfamily float Math\+Utils\+::weighted\+Hamming\+Distance (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{v1,  }\item[{const std\+::vector$<$ float $>$ \&}]{v2,  }\item[{const std\+::vector$<$ float $>$ \&}]{weights }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceMathUtils_ad549b2fe4f2d1d63c7de1b7a5dd2e3b0}\label{namespaceMathUtils_ad549b2fe4f2d1d63c7de1b7a5dd2e3b0}} 
+\index{MathUtils@{MathUtils}!weightedMinkowskiDistance@{weightedMinkowskiDistance}}
+\index{weightedMinkowskiDistance@{weightedMinkowskiDistance}!MathUtils@{MathUtils}}
+\doxysubsubsection{\texorpdfstring{weightedMinkowskiDistance()}{weightedMinkowskiDistance()}}
+{\footnotesize\ttfamily float Math\+Utils\+::weighted\+Minkowski\+Distance (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{v1,  }\item[{const std\+::vector$<$ float $>$ \&}]{v2,  }\item[{const std\+::vector$<$ float $>$ \&}]{weights,  }\item[{float}]{p }\end{DoxyParamCaption})}
+

@@ -1,0 +1,38 @@
+\hypertarget{MathUtils_8cpp}{}\doxysection{src/utils/\+Math\+Utils.cpp File Reference}
+\label{MathUtils_8cpp}\index{src/utils/MathUtils.cpp@{src/utils/MathUtils.cpp}}
+{\ttfamily \#include \char`\"{}utils/\+Math\+Utils.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$numeric$>$}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceMathUtils}{Math\+Utils}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::set$<$ int $>$ \mbox{\hyperlink{namespaceMathUtils_a8bfe0f5d5b7a56653a15963ad3337e40}{Math\+Utils\+::get\+Categorical\+Indexes}} (const std\+::vector$<$ float $>$ \&v)
+\item 
+float \mbox{\hyperlink{namespaceMathUtils_a618b453afcdb98a2bda692335dd49bda}{Math\+Utils\+::normalize}} (float value, float min, float max)
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{namespaceMathUtils_a92de779c48350c44454125cc70377a13}{Math\+Utils\+::normalize}} (const std\+::vector$<$ float $>$ \&values, const std\+::vector$<$ float $>$ \&min\+Values, const std\+::vector$<$ float $>$ \&max\+Values)
+\item 
+void \mbox{\hyperlink{namespaceMathUtils_a92300d90bea0482197f0144e4537cfe1}{Math\+Utils\+::normalize\+Weights}} (std\+::vector$<$ float $>$ \&weights)
+\item 
+float \mbox{\hyperlink{namespaceMathUtils_afc7a3eb28f6c34cc034fee7b8de487a9}{Math\+Utils\+::hamming\+Distance}} (const std\+::vector$<$ float $>$ \&v1, const std\+::vector$<$ float $>$ \&v2)
+\item 
+float \mbox{\hyperlink{namespaceMathUtils_a44d05e41fbd644a18e06e1d4de2eb25b}{Math\+Utils\+::weighted\+Hamming\+Distance}} (const std\+::vector$<$ float $>$ \&v1, const std\+::vector$<$ float $>$ \&v2, const std\+::vector$<$ float $>$ \&weights)
+\item 
+float \mbox{\hyperlink{namespaceMathUtils_a9fbe478cc831f0d8601b89e4f15c4301}{Math\+Utils\+::minkowski\+Distance}} (const std\+::vector$<$ float $>$ \&v1, const std\+::vector$<$ float $>$ \&v2, float p)
+\item 
+float \mbox{\hyperlink{namespaceMathUtils_ad549b2fe4f2d1d63c7de1b7a5dd2e3b0}{Math\+Utils\+::weighted\+Minkowski\+Distance}} (const std\+::vector$<$ float $>$ \&v1, const std\+::vector$<$ float $>$ \&v2, const std\+::vector$<$ float $>$ \&weights, float p)
+\item 
+float \mbox{\hyperlink{namespaceMathUtils_aa643f566df5a5da0878434121aaab5ef}{Math\+Utils\+::calculate\+Distance}} (const std\+::vector$<$ float $>$ \&v1, const std\+::vector$<$ float $>$ \&v2, const std\+::vector$<$ float $>$ \&weights, float p)
+\item 
+float \mbox{\hyperlink{namespaceMathUtils_a8c19da01858cb65eda0f58aad182d910}{Math\+Utils\+::weighted\+Euclidean\+Distance}} (const std\+::vector$<$ float $>$ \&v1, const std\+::vector$<$ float $>$ \&v2, const std\+::vector$<$ float $>$ \&weights)
+\item 
+float \mbox{\hyperlink{namespaceMathUtils_aa2184ba33ac025edf81e09939e70ffc7}{Math\+Utils\+::euclidean\+Distance}} (const std\+::vector$<$ float $>$ \&v1, const std\+::vector$<$ float $>$ \&v2)
+\end{DoxyCompactItemize}
