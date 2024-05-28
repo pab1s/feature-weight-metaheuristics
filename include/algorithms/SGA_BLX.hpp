@@ -38,21 +38,20 @@ public:
     ~SGABLX() override {}
 
     /**
+     * @brief Selects individuals for reproduction using tournament selection.
+     * 
+     * @param population The current population.
+     * @return A vector of selected individuals.
+     */
+    std::vector<Solution> select_for_reproduction(const std::vector<Solution>& population) override;
+
+    /**
      * @brief Mutates the population by applying random changes to the solutions.
      * 
      * @param population The current population.
      * @return A vector of mutated individuals.
      */
     std::vector<Solution> mutate_population(const std::vector<Solution>& population) override;
-
-    /**
-     * @brief Selects individuals from the population for reproduction.
-     * 
-     * @param population The current population.
-     * @param dataset The dataset used for selection.
-     * @return A vector of selected individuals.
-     */
-    std::vector<Solution> select_for_reproduction(const std::vector<Solution>& population) override;
 
     /**
      * @brief Recombines the population using the BLX crossover operator.

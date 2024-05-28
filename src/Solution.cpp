@@ -32,6 +32,14 @@ Solution& Solution::operator=(const Solution& other) {
     return *this;
 }
 
+Solution Solution::operator+(const Solution& other) const {
+    Solution result(weights.size());
+    for (size_t i = 0; i < weights.size(); ++i) {
+        result.setWeight(i, weights[i] + other.weights[i]);
+    }
+    return result;
+}
+
 std::ostream& operator<<(std::ostream& os, const Solution& solution) {
     os << "[";
     for (size_t i = 0; i < solution.size(); ++i) {
