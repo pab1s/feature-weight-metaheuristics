@@ -108,15 +108,6 @@ public:
     EvaluatedSolution evaluate(const Solution& solution, const DataSet& dataset);
 
     /**
-     * @brief Evaluates the population using the classification rate, reduction rate, and alpha value.
-     *
-     * @param population The population to evaluate.
-     * @param dataset The dataset to evaluate.
-     * @return A vector of fitness values.
-     */
-    std::vector<float> evaluatePopulation(const std::vector<Solution>& population, const DataSet& dataset);
-
-    /**
      * @brief Clears the fitness records.
      */
     void clearFitnessRecords();

@@ -67,6 +67,16 @@ public:
     Solution& operator=(const Solution& other); 
 
     /**
+     * @brief Overloaded addition operator.
+     * 
+     * This function allows two Solution objects to be added together.
+     * 
+     * @param other The Solution object to add.
+     * @return The resulting Solution object.
+     */
+    Solution operator+(const Solution& other) const;
+
+    /**
      * @brief Overloaded output stream operator.
      * 
      * This function allows the Solution object to be printed to an output stream.

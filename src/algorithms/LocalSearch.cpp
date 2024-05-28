@@ -27,6 +27,40 @@ EvaluatedSolution LocalSearch::run(Solution solution, const DataSet& dataset) {
     size_t maxNumNeighbors = maxNeighbors * n; 
     size_t numNeighbors = 0;
 
+    while (numNeighbors < maxNumNeighbors) {
+        std::vector<size_t> indices = RandomUtils::generateShuffledIndices(n);
+
+        for (size_t i = 0; i < indices.size(); ++i) {
+            Solution neighbor = generateNeighbor(currentSolution, indices[i]);
+            float fitness = eval->calculateFitnessLeaveOneOut(dataset, neighbor);
+
+            evaluations++;
+            if (maxEvaluations == 0) {
+                numNeighbors++;
+            }
+
+            if (fitness > currentFitness) {
+                currentSolution = neighbor;
+                currentFitness = fitness;
+            }
+        }
+
+        if (maxEvaluations > 0 && evaluations >= maxEvaluations) {
+            break;
+        }
+    }
+
+    return EvaluatedSolution{currentSolution, currentFitness};
+}
+
+EvaluatedSolution LocalSearch::run(const DataSet& dataset) {
+    size_t n = dataset.getNumFeatures();
+    Solution currentSolution(n);
+    float currentFitness = eval->calculateFitnessLeaveOneOut(dataset, currentSolution);
+
+    size_t maxNumNeighbors = maxNeighbors * n; 
+    size_t numNeighbors = 0;
+
     while (evaluations < maxEvaluations && numNeighbors < maxNumNeighbors) {
         bool improved = false;
         std::vector<size_t> indices = RandomUtils::generateShuffledIndices(n);
@@ -51,10 +85,4 @@ EvaluatedSolution LocalSearch::run(Solution solution, const DataSet& dataset) {
     }
 
     return EvaluatedSolution{currentSolution, currentFitness};
-}
-
-EvaluatedSolution LocalSearch::run(const DataSet& dataset) {
-    size_t n = dataset.getNumFeatures();
-    Solution currentSolution(n);
-    return run(currentSolution, dataset);
 }

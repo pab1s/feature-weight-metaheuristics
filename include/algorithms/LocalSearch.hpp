@@ -58,7 +58,7 @@ public:
      * @param dataset The dataset on which the algorithm will be run.
      * @return The solution obtained by the algorithm and its fitness value.
      */
-    EvaluatedSolution run(Solution solution, const DataSet& dataset);
+    virtual EvaluatedSolution run(Solution solution, const DataSet& dataset);
 
     /**
      * @brief Runs the local search algorithm on the given dataset.

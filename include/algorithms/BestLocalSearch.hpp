@@ -18,6 +18,15 @@ public:
         size_t maxEvaluations=15000, float mean=0.0f, float variance=0.3f);
 
     /**
+     * @brief Runs the local search algorithm on the given solution and dataset.
+     * 
+     * @param solution The initial solution to start the algorithm from.
+     * @param dataset The dataset on which the algorithm will be run.
+     * @return The solution obtained by the algorithm and its fitness value.
+     */
+    EvaluatedSolution run(Solution solution, const DataSet& dataset) override;
+
+    /**
      * @brief Run the best local search algorithm on the given dataset.
      * 
      * @param dataset The dataset on which the algorithm will be run.

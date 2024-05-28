@@ -1,10 +1,47 @@
 #include "algorithms/BestLocalSearch.hpp"
+#include "utils/RandomUtils.hpp"
 
 #include <omp.h>
 #include <limits>
 
 BestLocalSearch::BestLocalSearch(std::shared_ptr<Evaluation> eval, size_t maxNeighbors, size_t maxEvaluations, float mean, float variance)
 : LocalSearch(eval, maxNeighbors, maxEvaluations, mean, variance) {}
+
+EvaluatedSolution BestLocalSearch::run(Solution initialSolution, const DataSet& dataset) {
+  size_t n = dataset.getNumFeatures();
+  size_t maxNumNeighbors = maxNeighbors * n;
+
+  Solution currentSolution = initialSolution;
+  float currentFitness = eval->calculateFitnessLeaveOneOut(dataset, currentSolution);
+
+  while (evaluations < maxEvaluations) {
+    std::vector<size_t> indices = RandomUtils::generateShuffledIndices(n);
+
+    // Parallel section for neighbor evaluation
+    #pragma omp parallel for schedule(dynamic) reduction(+:evaluations)
+    for (size_t i = 0; i < indices.size(); ++i) {
+      Solution neighbor = generateNeighbor(currentSolution, indices[i]);
+      float fitness = eval->calculateFitnessLeaveOneOut(dataset, neighbor);
+      evaluations++;
+
+      // Critical section for updating best solution
+      #pragma omp critical
+      {
+        if (fitness > currentFitness) {
+          currentSolution = neighbor;
+          currentFitness = fitness;
+        }
+      }
+    }
+
+    // Check if improvement was found
+    if (evaluations >= maxNumNeighbors) {
+      break;
+    }
+  }
+
+  return EvaluatedSolution{currentSolution, currentFitness};
+}
 
 EvaluatedSolution BestLocalSearch::run(const DataSet& dataset) {
     size_t n = dataset.getNumFeatures();

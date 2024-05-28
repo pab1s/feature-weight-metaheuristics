@@ -4,11 +4,9 @@ import seaborn as sns
 
 sns.set_theme(style="darkgrid")
 
-filenames = ['1712489855022775484_breast-cancer_fold_1.csv',
-                '1712489882249218718_breast-cancer_fold_2.csv',
-                '1712489909964249845_breast-cancer_fold_3.csv',
-                '1712489937792821875_breast-cancer_fold_4.csv',
-                '1712489966488603531_breast-cancer_fold_5.csv']
+filenames = ['1714997370887197447_breast-cancer_fold_3.csv',
+                '1714997547137587590_breast-cancer_fold_3.csv',
+                '1714997694857295044_breast-cancer_fold_3.csv']
 
 data_series = []
 
@@ -21,10 +19,13 @@ plt.figure(figsize=(10, 6))
 
 colors = sns.color_palette('tab10', n_colors=len(filenames))
 
-for i, series in enumerate(data_series):
-    plt.plot(series, label=f'Partición {i+1}', color=colors[i])
+#for i, series in enumerate(data_series):
+#    plt.plot(series, label=f'Partición {i+1}', color=colors[i])
+plt.plot(data_series[0], label='AM(10, 1, 0)', color=colors[0])
+plt.plot(data_series[1], label='AM(10, 0.1, 0)', color=colors[1])
+plt.plot(data_series[2], label='AM(10, 0.1, 1)', color=colors[2])
 
-plt.title('Fitness de entrenamiento de la búsqueda local del primer mejor en Breast Cancer')
+#plt.title('Fitness de entrenamiento de la AGE-CA en Parkinsons')
 plt.legend()
 plt.xlabel('Iteración')
 plt.ylabel('Fitness')

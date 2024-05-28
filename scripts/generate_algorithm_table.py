@@ -6,27 +6,10 @@ def format_value(value, is_time=False):
     else:
         return "{:.2f}".format(value)
 
-'''
 filenames = [
-    'ecoli_1nn_2024-04-07_13-36-42.csv',
-    'parkinsons_1nn_2024-04-07_13-36-42.csv',
-    'breast-cancer_1nn_2024-04-07_13-36-42.csv'
-]
-
-filenames = [
-    'ecoli_relief_2024-04-07_13-36-42.csv',
-    'parkinsons_relief_2024-04-07_13-36-43.csv',
-    'breast-cancer_relief_2024-04-07_13-36-43.csv'
-]
-filenames = [
-    'ecoli_local-search_2024-04-07_13-36-44.csv',
-    'parkinsons_local-search_2024-04-07_13-36-49.csv',
-    'breast-cancer_local-search_2024-04-07_13-37-06.csv'
-]'''
-filenames = [
-    'ecoli_best-local-search_2024-04-07_13-39-26.csv',
-    'parkinsons_best-local-search_2024-04-07_13-39-56.csv',
-    'breast-cancer_best-local-search_2024-04-07_13-40-14.csv'
+    'ecoli_memetic-restart_2024-05-15_19-08-09.csv',
+    'parkinsons_memetic-restart_2024-05-15_19-08-42.csv',
+    'breast-cancer_memetic-restart_2024-05-15_19-09-05.csv'
 ]
 
 dataset_names = ['Ecoli', 'Parkinsons', 'Breast-cancer']
