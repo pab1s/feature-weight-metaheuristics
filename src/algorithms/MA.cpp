@@ -4,21 +4,22 @@
 #include <numeric>
 
 MemeticAlgorithm::MemeticAlgorithm(std::shared_ptr<Evaluation> eval, std::shared_ptr<GeneticAlgorithm> ga, std::shared_ptr<LocalSearch> ls,
-                                   size_t maxGenerations, size_t optimizationFrequency, float elitismRate, float selectionRate)
-    : eval(eval), ga(ga), ls(ls), maxGenerations(maxGenerations), optimizationFrequency(optimizationFrequency),
+                                   size_t maxEvaluations, size_t optimizationFrequency, float elitismRate, float selectionRate)
+    : eval(eval), ga(ga), ls(ls), maxEvaluations(maxEvaluations), optimizationFrequency(optimizationFrequency),
       elitismRate(elitismRate), selectionRate(selectionRate) {}
 
 MemeticAlgorithm::~MemeticAlgorithm() {}
 
 EvaluatedSolution MemeticAlgorithm::run(const DataSet& dataset) {
+    size_t evaluations = 0;
     size_t generation = 0;
     std::vector<Solution> population = ga->initialize_population(dataset.getNumFeatures());
-    populationFitness = eval->evaluatePopulation(population, dataset);
+    populationFitness = ga->evaluatePopulation(population, dataset);
     optimize_population(population, dataset);
     ga->setPopulationFitness(populationFitness);
     eval->insertFitnessRecord(*std::max_element(populationFitness.begin(), populationFitness.end()));
 
-    while (generation < maxGenerations) {
+    while (evaluations < maxEvaluations) {
         std::vector<Solution> selected = ga->select_for_reproduction(population);
         std::vector<Solution> offspring = ga->recombine_population(selected);
         offspring = ga->mutate_population(offspring);
@@ -31,9 +32,10 @@ EvaluatedSolution MemeticAlgorithm::run(const DataSet& dataset) {
 
         populationFitness = ga->getPopulationFitness();
         eval->insertFitnessRecord(*std::max_element(populationFitness.begin(), populationFitness.end()));
-        generation += ls->getEvaluations() + ga->getEvaluations();
+        evaluations += ls->getEvaluations() + ga->getEvaluations();
         ls->clearEvaluations();
         ga->clearEvaluations();
+        ++generation;
     }
 
     // Find the best solution in the population
@@ -46,7 +48,7 @@ void MemeticAlgorithm::optimize_population(std::vector<Solution>& population, co
     size_t numElitist = static_cast<size_t>(elitismRate * numToSelect);
     size_t numRandom = numToSelect - numElitist;
 
-    // Sort indices based on fitness in descending order
+    // Sort indices based on fitness in descending order (higher fitness first)
     std::vector<size_t> indices(population.size());
     std::iota(indices.begin(), indices.end(), 0);
     std::sort(indices.begin(), indices.end(), [&](size_t a, size_t b) {
