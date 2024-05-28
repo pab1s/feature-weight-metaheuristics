@@ -91,30 +91,6 @@ EvaluatedSolution Evaluation::evaluate(const Solution& solution, const DataSet& 
     return {solution, fitness};
 }
 
-std::vector<float> Evaluation::evaluatePopulation(const std::vector<Solution>& population, const DataSet& dataset) {
-    std::vector<float> localFitness(population.size());
-
-    #pragma omp parallel
-    {
-        std::vector<float> threadLocalFitness(population.size());
-
-        #pragma omp for nowait
-        for (size_t i = 0; i < population.size(); ++i) {
-            float classRate = calculateClassificationRate(dataset, population[i]);
-            float redRate = calculateReductionRate(population[i]);
-            float fitness = calculateFitness(classRate, redRate);
-            threadLocalFitness[i] = fitness;
-        }
-
-        #pragma omp for nowait
-        for (size_t i = 0; i < population.size(); ++i) {
-            localFitness[i] = threadLocalFitness[i];
-        }
-    }
-
-    return localFitness;
-}
-
 void Evaluation::clearFitnessRecords() {
     fitnessRecords.clear();
 }
