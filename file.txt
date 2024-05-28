@@ -1,0 +1,564 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 85.80     72.32    72.32 189456519     0.00     0.00  MathUtils::weightedEuclideanDistance(std::vector<float, std::allocator<float> > const&, std::vector<float, std::allocator<float> > const&, std::vector<float, std::allocator<float> > const&)
+  7.95     79.02     6.70  1436717     0.00     0.00  OneNN::classifyExcludingIndex[abi:cxx11](DataItem const&, unsigned long, Solution const&)
+  3.71     82.15     3.13 226027324     0.00     0.00  DataSet::operator[](int)
+  1.26     83.21     1.06                             _init
+  1.14     84.17     0.96     1495     0.00     0.06  Evaluation::insertFitnessRecord(float)
+  0.04     84.20     0.03  4633906     0.00     0.00  RandomUtils::getRandomFloat(float, float)
+  0.02     84.22     0.02  1644500     0.00     0.00  RandomUtils::getRandomNormal(float, float)
+  0.02     84.24     0.02  1395325     0.00     0.00  DataSet::size() const
+  0.02     84.26     0.02    75010     0.00     0.00  Evaluation::reduceSolution(Solution const&)
+  0.01     84.27     0.01    75000     0.00     0.00  Evaluation::calculateFitnessLeaveOneOut(DataSet const&, Solution const&)
+  0.01     84.28     0.01     2965     0.00     0.00  GeneticAlgorithm::blend_crossover(Solution const&, Solution const&, float)
+  0.01     84.29     0.01     1495     0.00     0.00  GeneticAlgorithm::elitist_replacement(std::vector<Solution, std::allocator<Solution> >&, std::vector<Solution, std::allocator<Solution> >&, DataSet const&)
+  0.00     84.29     0.00  3513251     0.00     0.00  RandomUtils::getRandomInt(int, int)
+  0.00     84.29     0.00   111500     0.00     0.00  Solution::size() const
+  0.00     84.29     0.00    75005     0.00     0.00  Evaluation::leaveOneOutCrossValidation(DataSet const&, Solution const&)
+  0.00     84.29     0.00    70215     0.00     0.00  Solution::operator=(Solution const&)
+  0.00     84.29     0.00    43310     0.00     0.00  Solution::Solution(unsigned long)
+  0.00     84.29     0.00    41835     0.00     0.00  Solution* std::__do_uninit_copy<Solution const*, Solution*>(Solution const*, Solution const*, Solution*)
+  0.00     84.29     0.00    37375     0.00     0.00  Solution* std::__do_uninit_copy<__gnu_cxx::__normal_iterator<Solution*, std::vector<Solution, std::allocator<Solution> > >, Solution*>(__gnu_cxx::__normal_iterator<Solution*, std::vector<Solution, std::allocator<Solution> > >, __gnu_cxx::__normal_iterator<Solution*, std::vector<Solution, std::allocator<Solution> > >, Solution*)
+  0.00     84.29     0.00    29900     0.00     0.00  GGABLX::replace_population(std::vector<Solution, std::allocator<Solution> >&, std::vector<Solution, std::allocator<Solution> >&, DataSet const&)
+  0.00     84.29     0.00    20844     0.00     0.00  std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()
+  0.00     84.29     0.00    10465     0.00     0.00  void std::vector<Solution, std::allocator<Solution> >::_M_realloc_insert<Solution const&>(__gnu_cxx::__normal_iterator<Solution*, std::vector<Solution, std::allocator<Solution> > >, Solution const&)
+  0.00     84.29     0.00     5850     0.00     0.00  void std::vector<float, std::allocator<float> >::_M_realloc_insert<float>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float&&)
+  0.00     84.29     0.00     4048     0.00     0.00  DataSet::operator[](int) const
+  0.00     84.29     0.00     1495     0.00     0.00  GeneticAlgorithm::tournament_selection(std::vector<Solution, std::allocator<Solution> > const&, unsigned long, unsigned long)
+  0.00     84.29     0.00     1495     0.00     0.00  GGABLX::mutate_population(std::vector<Solution, std::allocator<Solution> > const&)
+  0.00     84.29     0.00     1495     0.00     0.00  GGABLX::recombine_population(std::vector<Solution, std::allocator<Solution> > const&)
+  0.00     84.29     0.00     1495     0.00     0.00  GGABLX::select_for_reproduction(std::vector<Solution, std::allocator<Solution> > const&)
+  0.00     84.29     0.00      975     0.00     0.00  normalizeClassLabel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00     84.29     0.00      975     0.00     0.00  DataSet::addItem(DataItem const&)
+  0.00     84.29     0.00      195     0.00     0.00  OneNN::classify[abi:cxx11](DataItem const&, Solution const&) const
+  0.00     84.29     0.00       89     0.00     0.00  void std::vector<float, std::allocator<float> >::_M_realloc_insert<float const&>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float const&)
+  0.00     84.29     0.00       80     0.00     0.00  void std::vector<DataItem, std::allocator<DataItem> >::_M_realloc_insert<DataItem const&>(__gnu_cxx::__normal_iterator<DataItem*, std::vector<DataItem, std::allocator<DataItem> > >, DataItem const&)
+  0.00     84.29     0.00       50     0.00     0.00  DataSet::addClassLabel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00     84.29     0.00       25     0.00     0.00  DataLoader::readARFF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, DataSet&)
+  0.00     84.29     0.00       25     0.00     0.00  OneNN::OneNN(DataSet const&)
+  0.00     84.29     0.00       20     0.00     0.00  SGABLX::~SGABLX()
+  0.00     84.29     0.00       10     0.00     0.00  DataLoader::normalizeFeatures(DataSet&, DataItem const&, DataItem const&)
+  0.00     84.29     0.00       10     0.00     0.00  DataLoader::findMaxFeatureValues(DataSet const&)
+  0.00     84.29     0.00       10     0.00     0.00  DataLoader::findMinFeatureValues(DataSet const&)
+  0.00     84.29     0.00       10     0.00     0.00  GGABLX::~GGABLX()
+  0.00     84.29     0.00       10     0.00     0.00  DataSet::DataSet()
+  0.00     84.29     0.00        7     0.00    11.89  processFold(std::basic_ofstream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long, DataSet const&, DataSet const&, std::shared_ptr<Evaluation>, std::unique_ptr<Algorithm, std::default_delete<Algorithm> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool)
+  0.00     84.29     0.00        5     0.00     0.00  Evaluation::calculateFitness(float, float)
+  0.00     84.29     0.00        5     0.00     0.00  Evaluation::calculateReductionRate(Solution const&)
+  0.00     84.29     0.00        5     0.00     0.00  Evaluation::calculateClassificationRate(DataSet const&, Solution const&)
+  0.00     84.29     0.00        5     0.00     0.00  Evaluation::Evaluation(DataSet const&, float, float)
+  0.00     84.29     0.00        5     0.00     0.00  KNNClassifier::KNNClassifier(DataSet const&, unsigned long)
+  0.00     84.29     0.00        5     0.00     0.00  AlgorithmFactory::createAlgorithm(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> > > const&, std::shared_ptr<Evaluation>)
+  0.00     84.29     0.00        5     0.00     0.00  GeneticAlgorithm::evaluatePopulation(std::vector<Solution, std::allocator<Solution> > const&, DataSet const&)
+  0.00     84.29     0.00        5     0.00     0.00  GeneticAlgorithm::initialize_population(unsigned long)
+  0.00     84.29     0.00        5     0.00    16.65  GeneticAlgorithm::run(DataSet const&)
+  0.00     84.29     0.00        5     0.00     0.00  GeneticAlgorithm::GeneticAlgorithm(std::shared_ptr<Evaluation>, unsigned long, unsigned long, float, float, float, float)
+  0.00     84.29     0.00        5     0.00     0.00  GeneticAlgorithm::~GeneticAlgorithm()
+  0.00     84.29     0.00        5     0.00     0.00  DataSet::getNumFeatures() const
+  0.00     84.29     0.00        5     0.00     0.00  std::_Sp_counted_ptr_inplace<Evaluation, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy()
+  0.00     84.29     0.00        5     0.00     0.00  std::_Sp_counted_ptr_inplace<Evaluation, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
+  0.00     84.29     0.00        5     0.00     0.00  AlgorithmFactory::createAlgorithm(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> > > const&, std::shared_ptr<Evaluation>)::{lambda(unsigned long&, unsigned long&, float&, float&)#1}::operator()(unsigned long&, unsigned long&, float&, float&) const
+  0.00     84.29     0.00        5     0.00     0.00  operator<<(std::ostream&, Solution const&)
+  0.00     84.29     0.00        3     0.00     7.93  std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> > >::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&)
+  0.00     84.29     0.00        3     0.00     0.00  std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00     84.29     0.00        3     0.00     0.00  std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00     84.29     0.00        2     0.00     0.00  std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&)
+  0.00     84.29     0.00        1     0.00     0.00  RandomUtils::seedRandom(unsigned int)
+  0.00     84.29     0.00        1     0.00     0.00  effolkronium::seeder_default::seeder_default()
+  0.00     84.29     0.00        1     0.00     0.00  std::enable_if<std::__and_<std::__not_<std::is_same<std::remove_cv<std::remove_reference<std::seed_seq>::type>::type, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> > >, std::is_unsigned<std::seed_seq::result_type>, std::__not_<std::is_convertible<std::seed_seq, unsigned long> > >::value, void>::type std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::seed<std::seed_seq>(std::seed_seq&)
+  0.00     84.29     0.00        1     0.00     0.00  std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::~vector()
+  0.00     84.29     0.00        1     0.00     0.00  std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_get_insert_unique_pos(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00     84.29     0.00        1     0.00     0.00  std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> > >::_M_get_insert_unique_pos(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2022 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 4 byte(s) for 0.01% of 84.29 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     98.7    0.00   83.23                 main [1]
+                0.00   59.45       5/7           processFold(std::basic_ofstream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long, DataSet const&, DataSet const&, std::shared_ptr<Evaluation>, std::unique_ptr<Algorithm, std::default_delete<Algorithm> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) [2]
+                0.00   23.78       3/3           std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> > >::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) [7]
+                0.00    0.00      10/10          DataLoader::findMaxFeatureValues(DataSet const&) [26]
+                0.00    0.00      10/10          DataLoader::findMinFeatureValues(DataSet const&) [27]
+                0.00    0.00       1/4633906     RandomUtils::getRandomFloat(float, float) [12]
+                0.00    0.00      34/89          void std::vector<float, std::allocator<float> >::_M_realloc_insert<float const&>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float const&) [47]
+                0.00    0.00      25/25          DataLoader::readARFF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, DataSet&) [50]
+                0.00    0.00      10/10          DataSet::DataSet() [55]
+                0.00    0.00      10/10          DataLoader::normalizeFeatures(DataSet&, DataItem const&, DataItem const&) [53]
+                0.00    0.00       5/5           Evaluation::Evaluation(DataSet const&, float, float) [58]
+                0.00    0.00       5/5           AlgorithmFactory::createAlgorithm(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> > > const&, std::shared_ptr<Evaluation>) [60]
+                0.00    0.00       5/10          GGABLX::~GGABLX() [54]
+                0.00    0.00       5/5           std::_Sp_counted_ptr_inplace<Evaluation, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() [65]
+                0.00    0.00       5/5           std::_Sp_counted_ptr_inplace<Evaluation, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() [64]
+                0.00    0.00       3/3           std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [68]
+                0.00    0.00       2/2           std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) [70]
+                0.00    0.00       1/1           std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_get_insert_unique_pos(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [75]
+                0.00    0.00       1/3513251     RandomUtils::getRandomInt(int, int) [34]
+                0.00    0.00       1/1           std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> > >::_M_get_insert_unique_pos(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [76]
+                0.00    0.00       1/3           std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [69]
+                0.00    0.00       1/1           RandomUtils::seedRandom(unsigned int) [71]
+                0.00    0.00       1/1           std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::~vector() [74]
+-----------------------------------------------
+                0.00   23.78       2/7           std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> > >::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) [7]
+                0.00   59.45       5/7           main [1]
+[2]     98.7    0.00   83.23       7         processFold(std::basic_ofstream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long, DataSet const&, DataSet const&, std::shared_ptr<Evaluation>, std::unique_ptr<Algorithm, std::default_delete<Algorithm> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) [2]
+                0.00   83.23       5/5           GeneticAlgorithm::run(DataSet const&) [3]
+                0.00    0.00       5/75005       Evaluation::leaveOneOutCrossValidation(DataSet const&, Solution const&) [17]
+                0.00    0.00       5/5           Evaluation::calculateClassificationRate(DataSet const&, Solution const&) [24]
+                0.00    0.00       5/5           Evaluation::calculateReductionRate(Solution const&) [57]
+                0.00    0.00       5/5           Evaluation::calculateFitness(float, float) [56]
+                0.00    0.00       5/5           operator<<(std::ostream&, Solution const&) [67]
+                0.00    0.00       2/3           std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [69]
+-----------------------------------------------
+                0.00   83.23       5/5           processFold(std::basic_ofstream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long, DataSet const&, DataSet const&, std::shared_ptr<Evaluation>, std::unique_ptr<Algorithm, std::default_delete<Algorithm> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) [2]
+[3]     98.7    0.00   83.23       5         GeneticAlgorithm::run(DataSet const&) [3]
+                0.96   82.17    1495/1495        Evaluation::insertFitnessRecord(float) [4]
+                0.00    0.04    1495/1495        GGABLX::mutate_population(std::vector<Solution, std::allocator<Solution> > const&) [10]
+                0.01    0.03    1495/1495        GeneticAlgorithm::elitist_replacement(std::vector<Solution, std::allocator<Solution> >&, std::vector<Solution, std::allocator<Solution> >&, DataSet const&) [11]
+                0.00    0.02    1495/1495        GGABLX::recombine_population(std::vector<Solution, std::allocator<Solution> > const&) [18]
+                0.00    0.00    1495/1495        GGABLX::select_for_reproduction(std::vector<Solution, std::allocator<Solution> > const&) [22]
+                0.00    0.00       5/5           GeneticAlgorithm::evaluatePopulation(std::vector<Solution, std::allocator<Solution> > const&, DataSet const&) [23]
+                0.00    0.00       5/5           GeneticAlgorithm::initialize_population(unsigned long) [25]
+                0.00    0.00    1495/29900       GGABLX::replace_population(std::vector<Solution, std::allocator<Solution> >&, std::vector<Solution, std::allocator<Solution> >&, DataSet const&) [39]
+                0.00    0.00       5/5           DataSet::getNumFeatures() const [63]
+-----------------------------------------------
+                0.96   82.17    1495/1495        GeneticAlgorithm::run(DataSet const&) [3]
+[4]     98.6    0.96   82.17    1495         Evaluation::insertFitnessRecord(float) [4]
+                6.70   75.47 1436717/1436717     OneNN::classifyExcludingIndex[abi:cxx11](DataItem const&, unsigned long, Solution const&) [5]
+                0.00    0.00      50/89          void std::vector<float, std::allocator<float> >::_M_realloc_insert<float const&>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float const&) [47]
+-----------------------------------------------
+                6.70   75.47 1436717/1436717     Evaluation::insertFitnessRecord(float) [4]
+[5]     97.5    6.70   75.47 1436717         OneNN::classifyExcludingIndex[abi:cxx11](DataItem const&, unsigned long, Solution const&) [5]
+               72.32    0.00 189456519/189456519     MathUtils::weightedEuclideanDistance(std::vector<float, std::allocator<float> > const&, std::vector<float, std::allocator<float> > const&, std::vector<float, std::allocator<float> > const&) [6]
+                3.13    0.00 226027324/226027324     DataSet::operator[](int) [8]
+                0.02    0.00 1395305/1395325     DataSet::size() const [15]
+                0.00    0.00    4048/4048        DataSet::operator[](int) const [43]
+-----------------------------------------------
+               72.32    0.00 189456519/189456519     OneNN::classifyExcludingIndex[abi:cxx11](DataItem const&, unsigned long, Solution const&) [5]
+[6]     85.8   72.32    0.00 189456519         MathUtils::weightedEuclideanDistance(std::vector<float, std::allocator<float> > const&, std::vector<float, std::allocator<float> > const&, std::vector<float, std::allocator<float> > const&) [6]
+-----------------------------------------------
+                0.00   23.78       3/3           main [1]
+[7]     28.2    0.00   23.78       3         std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> > >::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) [7]
+                0.00   23.78       2/7           processFold(std::basic_ofstream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long, DataSet const&, DataSet const&, std::shared_ptr<Evaluation>, std::unique_ptr<Algorithm, std::default_delete<Algorithm> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) [2]
+-----------------------------------------------
+                3.13    0.00 226027324/226027324     OneNN::classifyExcludingIndex[abi:cxx11](DataItem const&, unsigned long, Solution const&) [5]
+[8]      3.7    3.13    0.00 226027324         DataSet::operator[](int) [8]
+-----------------------------------------------
+                                                 <spontaneous>
+[9]      1.3    1.06    0.00                 _init [9]
+-----------------------------------------------
+                0.00    0.04    1495/1495        GeneticAlgorithm::run(DataSet const&) [3]
+[10]     0.0    0.00    0.04    1495         GGABLX::mutate_population(std::vector<Solution, std::allocator<Solution> > const&) [10]
+                0.02    0.00 3289000/4633906     RandomUtils::getRandomFloat(float, float) [12]
+                0.02    0.00 1644500/1644500     RandomUtils::getRandomNormal(float, float) [14]
+                0.00    0.00 3289000/3513251     RandomUtils::getRandomInt(int, int) [34]
+-----------------------------------------------
+                0.01    0.03    1495/1495        GeneticAlgorithm::run(DataSet const&) [3]
+[11]     0.0    0.01    0.03    1495         GeneticAlgorithm::elitist_replacement(std::vector<Solution, std::allocator<Solution> >&, std::vector<Solution, std::allocator<Solution> >&, DataSet const&) [11]
+                0.01    0.02   74750/75000       Evaluation::calculateFitnessLeaveOneOut(DataSet const&, Solution const&) [13]
+                0.00    0.00    1395/70215       Solution::operator=(Solution const&) [36]
+-----------------------------------------------
+                0.00    0.00       1/4633906     main [1]
+                0.00    0.00   37375/4633906     GGABLX::recombine_population(std::vector<Solution, std::allocator<Solution> > const&) [18]
+                0.00    0.00  130460/4633906     GeneticAlgorithm::blend_crossover(Solution const&, Solution const&, float) [19]
+                0.00    0.00  224250/4633906     GeneticAlgorithm::tournament_selection(std::vector<Solution, std::allocator<Solution> > const&, unsigned long, unsigned long) [21]
+                0.01    0.00  952820/4633906     Solution::Solution(unsigned long) [20]
+                0.02    0.00 3289000/4633906     GGABLX::mutate_population(std::vector<Solution, std::allocator<Solution> > const&) [10]
+[12]     0.0    0.03    0.00 4633906         RandomUtils::getRandomFloat(float, float) [12]
+                0.00    0.00    7399/20844       std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand() [40]
+-----------------------------------------------
+                0.00    0.00     250/75000       GeneticAlgorithm::evaluatePopulation(std::vector<Solution, std::allocator<Solution> > const&, DataSet const&) [23]
+                0.01    0.02   74750/75000       GeneticAlgorithm::elitist_replacement(std::vector<Solution, std::allocator<Solution> >&, std::vector<Solution, std::allocator<Solution> >&, DataSet const&) [11]
+[13]     0.0    0.01    0.02   75000         Evaluation::calculateFitnessLeaveOneOut(DataSet const&, Solution const&) [13]
+                0.00    0.02   75000/75005       Evaluation::leaveOneOutCrossValidation(DataSet const&, Solution const&) [17]
+-----------------------------------------------
+                0.02    0.00 1644500/1644500     GGABLX::mutate_population(std::vector<Solution, std::allocator<Solution> > const&) [10]
+[14]     0.0    0.02    0.00 1644500         RandomUtils::getRandomNormal(float, float) [14]
+                0.00    0.00   13445/20844       std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand() [40]
+-----------------------------------------------
+                0.00    0.00      10/1395325     DataLoader::findMinFeatureValues(DataSet const&) [27]
+                0.00    0.00      10/1395325     DataLoader::findMaxFeatureValues(DataSet const&) [26]
+                0.02    0.00 1395305/1395325     OneNN::classifyExcludingIndex[abi:cxx11](DataItem const&, unsigned long, Solution const&) [5]
+[15]     0.0    0.02    0.00 1395325         DataSet::size() const [15]
+-----------------------------------------------
+                0.00    0.00       5/75010       Evaluation::calculateClassificationRate(DataSet const&, Solution const&) [24]
+                0.02    0.00   75005/75010       Evaluation::leaveOneOutCrossValidation(DataSet const&, Solution const&) [17]
+[16]     0.0    0.02    0.00   75010         Evaluation::reduceSolution(Solution const&) [16]
+-----------------------------------------------
+                0.00    0.00       5/75005       processFold(std::basic_ofstream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long, DataSet const&, DataSet const&, std::shared_ptr<Evaluation>, std::unique_ptr<Algorithm, std::default_delete<Algorithm> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) [2]
+                0.00    0.02   75000/75005       Evaluation::calculateFitnessLeaveOneOut(DataSet const&, Solution const&) [13]
+[17]     0.0    0.00    0.02   75005         Evaluation::leaveOneOutCrossValidation(DataSet const&, Solution const&) [17]
+                0.02    0.00   75005/75010       Evaluation::reduceSolution(Solution const&) [16]
+-----------------------------------------------
+                0.00    0.02    1495/1495        GeneticAlgorithm::run(DataSet const&) [3]
+[18]     0.0    0.00    0.02    1495         GGABLX::recombine_population(std::vector<Solution, std::allocator<Solution> > const&) [18]
+                0.01    0.00    2965/2965        GeneticAlgorithm::blend_crossover(Solution const&, Solution const&, float) [19]
+                0.00    0.01   37375/43310       Solution::Solution(unsigned long) [20]
+                0.00    0.00   37375/4633906     RandomUtils::getRandomFloat(float, float) [12]
+                0.00    0.00   68820/70215       Solution::operator=(Solution const&) [36]
+                0.00    0.00   37375/111500      Solution::size() const [35]
+                0.00    0.00   37375/37375       Solution* std::__do_uninit_copy<__gnu_cxx::__normal_iterator<Solution*, std::vector<Solution, std::allocator<Solution> > >, Solution*>(__gnu_cxx::__normal_iterator<Solution*, std::vector<Solution, std::allocator<Solution> > >, __gnu_cxx::__normal_iterator<Solution*, std::vector<Solution, std::allocator<Solution> > >, Solution*) [38]
+                0.00    0.00   28405/29900       GGABLX::replace_population(std::vector<Solution, std::allocator<Solution> >&, std::vector<Solution, std::allocator<Solution> >&, DataSet const&) [39]
+                0.00    0.00   17940/41835       Solution* std::__do_uninit_copy<Solution const*, Solution*>(Solution const*, Solution const*, Solution*) [37]
+-----------------------------------------------
+                0.01    0.00    2965/2965        GGABLX::recombine_population(std::vector<Solution, std::allocator<Solution> > const&) [18]
+[19]     0.0    0.01    0.00    2965         GeneticAlgorithm::blend_crossover(Solution const&, Solution const&, float) [19]
+                0.00    0.00  130460/4633906     RandomUtils::getRandomFloat(float, float) [12]
+                0.00    0.00    5930/43310       Solution::Solution(unsigned long) [20]
+                0.00    0.00   74125/111500      Solution::size() const [35]
+                0.00    0.00    2965/41835       Solution* std::__do_uninit_copy<Solution const*, Solution*>(Solution const*, Solution const*, Solution*) [37]
+-----------------------------------------------
+                0.00    0.00       5/43310       GeneticAlgorithm::initialize_population(unsigned long) [25]
+                0.00    0.00    5930/43310       GeneticAlgorithm::blend_crossover(Solution const&, Solution const&, float) [19]
+                0.00    0.01   37375/43310       GGABLX::recombine_population(std::vector<Solution, std::allocator<Solution> > const&) [18]
+[20]     0.0    0.00    0.01   43310         Solution::Solution(unsigned long) [20]
+                0.01    0.00  952820/4633906     RandomUtils::getRandomFloat(float, float) [12]
+-----------------------------------------------
+                0.00    0.00    1495/1495        GGABLX::select_for_reproduction(std::vector<Solution, std::allocator<Solution> > const&) [22]
+[21]     0.0    0.00    0.00    1495         GeneticAlgorithm::tournament_selection(std::vector<Solution, std::allocator<Solution> > const&, unsigned long, unsigned long) [21]
+                0.00    0.00  224250/4633906     RandomUtils::getRandomFloat(float, float) [12]
+                0.00    0.00  224250/3513251     RandomUtils::getRandomInt(int, int) [34]
+                0.00    0.00   10465/10465       void std::vector<Solution, std::allocator<Solution> >::_M_realloc_insert<Solution const&>(__gnu_cxx::__normal_iterator<Solution*, std::vector<Solution, std::allocator<Solution> > >, Solution const&) [41]
+-----------------------------------------------
+                0.00    0.00    1495/1495        GeneticAlgorithm::run(DataSet const&) [3]
+[22]     0.0    0.00    0.00    1495         GGABLX::select_for_reproduction(std::vector<Solution, std::allocator<Solution> > const&) [22]
+                0.00    0.00    1495/1495        GeneticAlgorithm::tournament_selection(std::vector<Solution, std::allocator<Solution> > const&, unsigned long, unsigned long) [21]
+-----------------------------------------------
+                0.00    0.00       5/5           GeneticAlgorithm::run(DataSet const&) [3]
+[23]     0.0    0.00    0.00       5         GeneticAlgorithm::evaluatePopulation(std::vector<Solution, std::allocator<Solution> > const&, DataSet const&) [23]
+                0.00    0.00     250/75000       Evaluation::calculateFitnessLeaveOneOut(DataSet const&, Solution const&) [13]
+-----------------------------------------------
+                0.00    0.00       5/5           processFold(std::basic_ofstream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long, DataSet const&, DataSet const&, std::shared_ptr<Evaluation>, std::unique_ptr<Algorithm, std::default_delete<Algorithm> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) [2]
+[24]     0.0    0.00    0.00       5         Evaluation::calculateClassificationRate(DataSet const&, Solution const&) [24]
+                0.00    0.00       5/75010       Evaluation::reduceSolution(Solution const&) [16]
+                0.00    0.00     195/195         OneNN::classify[abi:cxx11](DataItem const&, Solution const&) const [46]
+-----------------------------------------------
+                0.00    0.00       5/5           GeneticAlgorithm::run(DataSet const&) [3]
+[25]     0.0    0.00    0.00       5         GeneticAlgorithm::initialize_population(unsigned long) [25]
+                0.00    0.00       5/43310       Solution::Solution(unsigned long) [20]
+-----------------------------------------------
+                0.00    0.00      10/10          main [1]
+[26]     0.0    0.00    0.00      10         DataLoader::findMaxFeatureValues(DataSet const&) [26]
+                0.00    0.00      10/1395325     DataSet::size() const [15]
+                0.00    0.00      10/20          SGABLX::~SGABLX() [52]
+-----------------------------------------------
+                0.00    0.00      10/10          main [1]
+[27]     0.0    0.00    0.00      10         DataLoader::findMinFeatureValues(DataSet const&) [27]
+                0.00    0.00      10/1395325     DataSet::size() const [15]
+                0.00    0.00      10/20          SGABLX::~SGABLX() [52]
+-----------------------------------------------
+                0.00    0.00       1/3513251     main [1]
+                0.00    0.00  224250/3513251     GeneticAlgorithm::tournament_selection(std::vector<Solution, std::allocator<Solution> > const&, unsigned long, unsigned long) [21]
+                0.00    0.00 3289000/3513251     GGABLX::mutate_population(std::vector<Solution, std::allocator<Solution> > const&) [10]
+[34]     0.0    0.00    0.00 3513251         RandomUtils::getRandomInt(int, int) [34]
+                0.00    0.00       1/1           effolkronium::seeder_default::seeder_default() [72]
+                0.00    0.00       1/1           std::enable_if<std::__and_<std::__not_<std::is_same<std::remove_cv<std::remove_reference<std::seed_seq>::type>::type, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> > >, std::is_unsigned<std::seed_seq::result_type>, std::__not_<std::is_convertible<std::seed_seq, unsigned long> > >::value, void>::type std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::seed<std::seed_seq>(std::seed_seq&) [73]
+-----------------------------------------------
+                0.00    0.00   37375/111500      GGABLX::recombine_population(std::vector<Solution, std::allocator<Solution> > const&) [18]
+                0.00    0.00   74125/111500      GeneticAlgorithm::blend_crossover(Solution const&, Solution const&, float) [19]
+[35]     0.0    0.00    0.00  111500         Solution::size() const [35]
+-----------------------------------------------
+                0.00    0.00    1395/70215       GeneticAlgorithm::elitist_replacement(std::vector<Solution, std::allocator<Solution> >&, std::vector<Solution, std::allocator<Solution> >&, DataSet const&) [11]
+                0.00    0.00   68820/70215       GGABLX::recombine_population(std::vector<Solution, std::allocator<Solution> > const&) [18]
+[36]     0.0    0.00    0.00   70215         Solution::operator=(Solution const&) [36]
+-----------------------------------------------
+                0.00    0.00    2965/41835       GeneticAlgorithm::blend_crossover(Solution const&, Solution const&, float) [19]
+                0.00    0.00   17940/41835       GGABLX::recombine_population(std::vector<Solution, std::allocator<Solution> > const&) [18]
+                0.00    0.00   20930/41835       void std::vector<Solution, std::allocator<Solution> >::_M_realloc_insert<Solution const&>(__gnu_cxx::__normal_iterator<Solution*, std::vector<Solution, std::allocator<Solution> > >, Solution const&) [41]
+[37]     0.0    0.00    0.00   41835         Solution* std::__do_uninit_copy<Solution const*, Solution*>(Solution const*, Solution const*, Solution*) [37]
+-----------------------------------------------
+                0.00    0.00   37375/37375       GGABLX::recombine_population(std::vector<Solution, std::allocator<Solution> > const&) [18]
+[38]     0.0    0.00    0.00   37375         Solution* std::__do_uninit_copy<__gnu_cxx::__normal_iterator<Solution*, std::vector<Solution, std::allocator<Solution> > >, Solution*>(__gnu_cxx::__normal_iterator<Solution*, std::vector<Solution, std::allocator<Solution> > >, __gnu_cxx::__normal_iterator<Solution*, std::vector<Solution, std::allocator<Solution> > >, Solution*) [38]
+-----------------------------------------------
+                0.00    0.00    1495/29900       GeneticAlgorithm::run(DataSet const&) [3]
+                0.00    0.00   28405/29900       GGABLX::recombine_population(std::vector<Solution, std::allocator<Solution> > const&) [18]
+[39]     0.0    0.00    0.00   29900         GGABLX::replace_population(std::vector<Solution, std::allocator<Solution> >&, std::vector<Solution, std::allocator<Solution> >&, DataSet const&) [39]
+-----------------------------------------------
+                0.00    0.00    7399/20844       RandomUtils::getRandomFloat(float, float) [12]
+                0.00    0.00   13445/20844       RandomUtils::getRandomNormal(float, float) [14]
+[40]     0.0    0.00    0.00   20844         std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand() [40]
+-----------------------------------------------
+                0.00    0.00   10465/10465       GeneticAlgorithm::tournament_selection(std::vector<Solution, std::allocator<Solution> > const&, unsigned long, unsigned long) [21]
+[41]     0.0    0.00    0.00   10465         void std::vector<Solution, std::allocator<Solution> >::_M_realloc_insert<Solution const&>(__gnu_cxx::__normal_iterator<Solution*, std::vector<Solution, std::allocator<Solution> > >, Solution const&) [41]
+                0.00    0.00   20930/41835       Solution* std::__do_uninit_copy<Solution const*, Solution*>(Solution const*, Solution const*, Solution*) [37]
+-----------------------------------------------
+                0.00    0.00    5850/5850        DataLoader::readARFF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, DataSet&) [50]
+[42]     0.0    0.00    0.00    5850         void std::vector<float, std::allocator<float> >::_M_realloc_insert<float>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float&&) [42]
+-----------------------------------------------
+                0.00    0.00    4048/4048        OneNN::classifyExcludingIndex[abi:cxx11](DataItem const&, unsigned long, Solution const&) [5]
+[43]     0.0    0.00    0.00    4048         DataSet::operator[](int) const [43]
+-----------------------------------------------
+                0.00    0.00     975/975         DataLoader::readARFF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, DataSet&) [50]
+[44]     0.0    0.00    0.00     975         normalizeClassLabel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [44]
+-----------------------------------------------
+                0.00    0.00     975/975         DataLoader::readARFF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, DataSet&) [50]
+[45]     0.0    0.00    0.00     975         DataSet::addItem(DataItem const&) [45]
+-----------------------------------------------
+                0.00    0.00     195/195         Evaluation::calculateClassificationRate(DataSet const&, Solution const&) [24]
+[46]     0.0    0.00    0.00     195         OneNN::classify[abi:cxx11](DataItem const&, Solution const&) const [46]
+-----------------------------------------------
+                                   5             void std::vector<float, std::allocator<float> >::_M_realloc_insert<float const&>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float const&) [47]
+                0.00    0.00       5/89          std::_Sp_counted_ptr_inplace<Evaluation, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() [65]
+                0.00    0.00      34/89          main [1]
+                0.00    0.00      50/89          Evaluation::insertFitnessRecord(float) [4]
+[47]     0.0    0.00    0.00      89+5       void std::vector<float, std::allocator<float> >::_M_realloc_insert<float const&>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float const&) [47]
+                                   5             void std::vector<float, std::allocator<float> >::_M_realloc_insert<float const&>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float const&) [47]
+-----------------------------------------------
+                0.00    0.00      80/80          DataLoader::readARFF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, DataSet&) [50]
+[48]     0.0    0.00    0.00      80         void std::vector<DataItem, std::allocator<DataItem> >::_M_realloc_insert<DataItem const&>(__gnu_cxx::__normal_iterator<DataItem*, std::vector<DataItem, std::allocator<DataItem> > >, DataItem const&) [48]
+-----------------------------------------------
+                0.00    0.00      50/50          DataLoader::readARFF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, DataSet&) [50]
+[49]     0.0    0.00    0.00      50         DataSet::addClassLabel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [49]
+-----------------------------------------------
+                0.00    0.00      25/25          main [1]
+[50]     0.0    0.00    0.00      25         DataLoader::readARFF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, DataSet&) [50]
+                0.00    0.00    5850/5850        void std::vector<float, std::allocator<float> >::_M_realloc_insert<float>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float&&) [42]
+                0.00    0.00     975/975         normalizeClassLabel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [44]
+                0.00    0.00     975/975         DataSet::addItem(DataItem const&) [45]
+                0.00    0.00      80/80          void std::vector<DataItem, std::allocator<DataItem> >::_M_realloc_insert<DataItem const&>(__gnu_cxx::__normal_iterator<DataItem*, std::vector<DataItem, std::allocator<DataItem> > >, DataItem const&) [48]
+                0.00    0.00      50/50          DataSet::addClassLabel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [49]
+-----------------------------------------------
+                0.00    0.00       5/25          Evaluation::Evaluation(DataSet const&, float, float) [58]
+                0.00    0.00      20/25          AlgorithmFactory::createAlgorithm(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> > > const&, std::shared_ptr<Evaluation>)::{lambda(unsigned long&, unsigned long&, float&, float&)#1}::operator()(unsigned long&, unsigned long&, float&, float&) const [66]
+[51]     0.0    0.00    0.00      25         OneNN::OneNN(DataSet const&) [51]
+                0.00    0.00       5/5           KNNClassifier::KNNClassifier(DataSet const&, unsigned long) [59]
+-----------------------------------------------
+                0.00    0.00      10/20          DataLoader::findMinFeatureValues(DataSet const&) [27]
+                0.00    0.00      10/20          DataLoader::findMaxFeatureValues(DataSet const&) [26]
+[52]     0.0    0.00    0.00      20         SGABLX::~SGABLX() [52]
+-----------------------------------------------
+                0.00    0.00      10/10          main [1]
+[53]     0.0    0.00    0.00      10         DataLoader::normalizeFeatures(DataSet&, DataItem const&, DataItem const&) [53]
+-----------------------------------------------
+                                   5             GGABLX::~GGABLX() [54]
+                0.00    0.00       5/10          main [1]
+                0.00    0.00       5/10          KNNClassifier::KNNClassifier(DataSet const&, unsigned long) [59]
+[54]     0.0    0.00    0.00      10+5       GGABLX::~GGABLX() [54]
+                0.00    0.00       5/5           GeneticAlgorithm::~GeneticAlgorithm() [62]
+                                   5             GGABLX::~GGABLX() [54]
+-----------------------------------------------
+                0.00    0.00      10/10          main [1]
+[55]     0.0    0.00    0.00      10         DataSet::DataSet() [55]
+-----------------------------------------------
+                0.00    0.00       5/5           processFold(std::basic_ofstream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long, DataSet const&, DataSet const&, std::shared_ptr<Evaluation>, std::unique_ptr<Algorithm, std::default_delete<Algorithm> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) [2]
+[56]     0.0    0.00    0.00       5         Evaluation::calculateFitness(float, float) [56]
+-----------------------------------------------
+                0.00    0.00       5/5           processFold(std::basic_ofstream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long, DataSet const&, DataSet const&, std::shared_ptr<Evaluation>, std::unique_ptr<Algorithm, std::default_delete<Algorithm> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) [2]
+[57]     0.0    0.00    0.00       5         Evaluation::calculateReductionRate(Solution const&) [57]
+-----------------------------------------------
+                0.00    0.00       5/5           main [1]
+[58]     0.0    0.00    0.00       5         Evaluation::Evaluation(DataSet const&, float, float) [58]
+                0.00    0.00       5/25          OneNN::OneNN(DataSet const&) [51]
+-----------------------------------------------
+                0.00    0.00       5/5           OneNN::OneNN(DataSet const&) [51]
+[59]     0.0    0.00    0.00       5         KNNClassifier::KNNClassifier(DataSet const&, unsigned long) [59]
+                0.00    0.00       5/10          GGABLX::~GGABLX() [54]
+-----------------------------------------------
+                0.00    0.00       5/5           main [1]
+[60]     0.0    0.00    0.00       5         AlgorithmFactory::createAlgorithm(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> > > const&, std::shared_ptr<Evaluation>) [60]
+                0.00    0.00       5/5           AlgorithmFactory::createAlgorithm(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> > > const&, std::shared_ptr<Evaluation>)::{lambda(unsigned long&, unsigned long&, float&, float&)#1}::operator()(unsigned long&, unsigned long&, float&, float&) const [66]
+                0.00    0.00       5/5           GeneticAlgorithm::GeneticAlgorithm(std::shared_ptr<Evaluation>, unsigned long, unsigned long, float, float, float, float) [61]
+-----------------------------------------------
+                0.00    0.00       5/5           AlgorithmFactory::createAlgorithm(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> > > const&, std::shared_ptr<Evaluation>) [60]
+[61]     0.0    0.00    0.00       5         GeneticAlgorithm::GeneticAlgorithm(std::shared_ptr<Evaluation>, unsigned long, unsigned long, float, float, float, float) [61]
+-----------------------------------------------
+                0.00    0.00       5/5           GGABLX::~GGABLX() [54]
+[62]     0.0    0.00    0.00       5         GeneticAlgorithm::~GeneticAlgorithm() [62]
+-----------------------------------------------
+                0.00    0.00       5/5           GeneticAlgorithm::run(DataSet const&) [3]
+[63]     0.0    0.00    0.00       5         DataSet::getNumFeatures() const [63]
+-----------------------------------------------
+                0.00    0.00       5/5           main [1]
+[64]     0.0    0.00    0.00       5         std::_Sp_counted_ptr_inplace<Evaluation, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() [64]
+-----------------------------------------------
+                0.00    0.00       5/5           main [1]
+[65]     0.0    0.00    0.00       5         std::_Sp_counted_ptr_inplace<Evaluation, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() [65]
+                0.00    0.00       5/89          void std::vector<float, std::allocator<float> >::_M_realloc_insert<float const&>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float const&) [47]
+-----------------------------------------------
+                0.00    0.00       5/5           AlgorithmFactory::createAlgorithm(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> > > const&, std::shared_ptr<Evaluation>) [60]
+[66]     0.0    0.00    0.00       5         AlgorithmFactory::createAlgorithm(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> > > const&, std::shared_ptr<Evaluation>)::{lambda(unsigned long&, unsigned long&, float&, float&)#1}::operator()(unsigned long&, unsigned long&, float&, float&) const [66]
+                0.00    0.00      20/25          OneNN::OneNN(DataSet const&) [51]
+-----------------------------------------------
+                0.00    0.00       5/5           processFold(std::basic_ofstream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long, DataSet const&, DataSet const&, std::shared_ptr<Evaluation>, std::unique_ptr<Algorithm, std::default_delete<Algorithm> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) [2]
+[67]     0.0    0.00    0.00       5         operator<<(std::ostream&, Solution const&) [67]
+-----------------------------------------------
+                0.00    0.00       3/3           main [1]
+[68]     0.0    0.00    0.00       3         std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [68]
+-----------------------------------------------
+                0.00    0.00       1/3           main [1]
+                0.00    0.00       2/3           processFold(std::basic_ofstream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long, DataSet const&, DataSet const&, std::shared_ptr<Evaluation>, std::unique_ptr<Algorithm, std::default_delete<Algorithm> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) [2]
+[69]     0.0    0.00    0.00       3         std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [69]
+-----------------------------------------------
+                0.00    0.00       2/2           main [1]
+[70]     0.0    0.00    0.00       2         std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) [70]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[71]     0.0    0.00    0.00       1         RandomUtils::seedRandom(unsigned int) [71]
+-----------------------------------------------
+                0.00    0.00       1/1           RandomUtils::getRandomInt(int, int) [34]
+[72]     0.0    0.00    0.00       1         effolkronium::seeder_default::seeder_default() [72]
+-----------------------------------------------
+                0.00    0.00       1/1           RandomUtils::getRandomInt(int, int) [34]
+[73]     0.0    0.00    0.00       1         std::enable_if<std::__and_<std::__not_<std::is_same<std::remove_cv<std::remove_reference<std::seed_seq>::type>::type, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> > >, std::is_unsigned<std::seed_seq::result_type>, std::__not_<std::is_convertible<std::seed_seq, unsigned long> > >::value, void>::type std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::seed<std::seed_seq>(std::seed_seq&) [73]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[74]     0.0    0.00    0.00       1         std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::~vector() [74]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[75]     0.0    0.00    0.00       1         std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_get_insert_unique_pos(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [75]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[76]     0.0    0.00    0.00       1         std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> > >::_M_get_insert_unique_pos(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [76]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2022 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+   [2] processFold(std::basic_ofstream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long, DataSet const&, DataSet const&, std::shared_ptr<Evaluation>, std::unique_ptr<Algorithm, std::default_delete<Algorithm> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) [11] GeneticAlgorithm::elitist_replacement(std::vector<Solution, std::allocator<Solution> >&, std::vector<Solution, std::allocator<Solution> >&, DataSet const&) [15] DataSet::size() const
+  [44] normalizeClassLabel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [21] GeneticAlgorithm::tournament_selection(std::vector<Solution, std::allocator<Solution> > const&, unsigned long, unsigned long) [43] DataSet::operator[](int) const
+  [53] DataLoader::normalizeFeatures(DataSet&, DataItem const&, DataItem const&) [25] GeneticAlgorithm::initialize_population(unsigned long) [35] Solution::size() const
+  [26] DataLoader::findMaxFeatureValues(DataSet const&) [3] GeneticAlgorithm::run(DataSet const&) [64] std::_Sp_counted_ptr_inplace<Evaluation, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy()
+  [27] DataLoader::findMinFeatureValues(DataSet const&) [61] GeneticAlgorithm::GeneticAlgorithm(std::shared_ptr<Evaluation>, unsigned long, unsigned long, float, float, float, float) [65] std::_Sp_counted_ptr_inplace<Evaluation, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
+  [50] DataLoader::readARFF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, DataSet&) [62] GeneticAlgorithm::~GeneticAlgorithm() [40] std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()
+  [16] Evaluation::reduceSolution(Solution const&) [5] OneNN::classifyExcludingIndex[abi:cxx11](DataItem const&, unsigned long, Solution const&) [73] std::enable_if<std::__and_<std::__not_<std::is_same<std::remove_cv<std::remove_reference<std::seed_seq>::type>::type, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> > >, std::is_unsigned<std::seed_seq::result_type>, std::__not_<std::is_convertible<std::seed_seq, unsigned long> > >::value, void>::type std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::seed<std::seed_seq>(std::seed_seq&)
+  [56] Evaluation::calculateFitness(float, float) [51] OneNN::OneNN(DataSet const&) [70] std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&)
+   [4] Evaluation::insertFitnessRecord(float) [10] GGABLX::mutate_population(std::vector<Solution, std::allocator<Solution> > const&) [7] std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> > >::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&)
+  [57] Evaluation::calculateReductionRate(Solution const&) [39] GGABLX::replace_population(std::vector<Solution, std::allocator<Solution> >&, std::vector<Solution, std::allocator<Solution> >&, DataSet const&) [48] void std::vector<DataItem, std::allocator<DataItem> >::_M_realloc_insert<DataItem const&>(__gnu_cxx::__normal_iterator<DataItem*, std::vector<DataItem, std::allocator<DataItem> > >, DataItem const&)
+  [17] Evaluation::leaveOneOutCrossValidation(DataSet const&, Solution const&) [18] GGABLX::recombine_population(std::vector<Solution, std::allocator<Solution> > const&) [41] void std::vector<Solution, std::allocator<Solution> >::_M_realloc_insert<Solution const&>(__gnu_cxx::__normal_iterator<Solution*, std::vector<Solution, std::allocator<Solution> > >, Solution const&)
+  [24] Evaluation::calculateClassificationRate(DataSet const&, Solution const&) [22] GGABLX::select_for_reproduction(std::vector<Solution, std::allocator<Solution> > const&) [74] std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::~vector()
+  [13] Evaluation::calculateFitnessLeaveOneOut(DataSet const&, Solution const&) [54] GGABLX::~GGABLX() [47] void std::vector<float, std::allocator<float> >::_M_realloc_insert<float const&>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float const&)
+  [58] Evaluation::Evaluation(DataSet const&, float, float) [52] SGABLX::~SGABLX() [42] void std::vector<float, std::allocator<float> >::_M_realloc_insert<float>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, float&&)
+  [71] RandomUtils::seedRandom(unsigned int) [49] DataSet::addClassLabel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [75] std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_get_insert_unique_pos(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  [34] RandomUtils::getRandomInt(int, int) [45] DataSet::addItem(DataItem const&) [68] std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  [12] RandomUtils::getRandomFloat(float, float) [55] DataSet::DataSet() [76] std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> > >::_M_get_insert_unique_pos(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  [14] RandomUtils::getRandomNormal(float, float) [8] DataSet::operator[](int) [69] std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  [72] effolkronium::seeder_default::seeder_default() [20] Solution::Solution(unsigned long) [38] Solution* std::__do_uninit_copy<__gnu_cxx::__normal_iterator<Solution*, std::vector<Solution, std::allocator<Solution> > >, Solution*>(__gnu_cxx::__normal_iterator<Solution*, std::vector<Solution, std::allocator<Solution> > >, __gnu_cxx::__normal_iterator<Solution*, std::vector<Solution, std::allocator<Solution> > >, Solution*)
+  [59] KNNClassifier::KNNClassifier(DataSet const&, unsigned long) [36] Solution::operator=(Solution const&) [37] Solution* std::__do_uninit_copy<Solution const*, Solution*>(Solution const*, Solution const*, Solution*)
+  [60] AlgorithmFactory::createAlgorithm(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> > > const&, std::shared_ptr<Evaluation>) [6] MathUtils::weightedEuclideanDistance(std::vector<float, std::allocator<float> > const&, std::vector<float, std::allocator<float> > const&, std::vector<float, std::allocator<float> > const&) [66] AlgorithmFactory::createAlgorithm(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, float, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, float> > > const&, std::shared_ptr<Evaluation>)::{lambda(unsigned long&, unsigned long&, float&, float&)#1}::operator()(unsigned long&, unsigned long&, float&, float&) const (AlgorithmFactory.cpp)
+  [19] GeneticAlgorithm::blend_crossover(Solution const&, Solution const&, float) [46] OneNN::classify[abi:cxx11](DataItem const&, Solution const&) const [67] operator<<(std::ostream&, Solution const&)
+  [23] GeneticAlgorithm::evaluatePopulation(std::vector<Solution, std::allocator<Solution> > const&, DataSet const&) [63] DataSet::getNumFeatures() const [9] _init
