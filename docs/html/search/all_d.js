@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['naive_2ecpp_0',['Naive.cpp',['../Naive_8cpp.html',1,'']]],
-  ['normalize_1',['normalize',['../namespaceMathUtils.html#a618b453afcdb98a2bda692335dd49bda',1,'MathUtils::normalize(float value, float min, float max)'],['../namespaceMathUtils.html#a92de779c48350c44454125cc70377a13',1,'MathUtils::normalize(const std::vector&lt; float &gt; &amp;values, const std::vector&lt; float &gt; &amp;minValues, const std::vector&lt; float &gt; &amp;maxValues)']]],
-  ['normalizeclasslabel_2',['normalizeClassLabel',['../DataLoader_8cpp.html#a587383969d2ef5be896037771e6b4cc9',1,'DataLoader.cpp']]],
-  ['normalizefeatures_3',['normalizeFeatures',['../namespaceDataLoader.html#a6c4a949de3857c4e83b0a6fe60e9d4b6',1,'DataLoader']]],
-  ['normalizeweights_4',['normalizeWeights',['../namespaceMathUtils.html#a92300d90bea0482197f0144e4537cfe1',1,'MathUtils']]]
+  ['ma_2drestart_2ecpp_0',['MA-restart.cpp',['../MA-restart_8cpp.html',1,'']]],
+  ['ma_2ecpp_1',['MA.cpp',['../MA_8cpp.html',1,'']]],
+  ['main_2',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
+  ['main_2ecpp_3',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['mathutils_4',['MathUtils',['../namespaceMathUtils.html',1,'']]],
+  ['mathutils_2ecpp_5',['MathUtils.cpp',['../MathUtils_8cpp.html',1,'']]],
+  ['minkowskidistance_6',['minkowskiDistance',['../namespaceMathUtils.html#a9fbe478cc831f0d8601b89e4f15c4301',1,'MathUtils']]]
 ];

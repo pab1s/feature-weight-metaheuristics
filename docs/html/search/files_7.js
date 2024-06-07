@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['localsearch_2ecpp_0',['LocalSearch.cpp',['../LocalSearch_8cpp.html',1,'']]]
+  ['knnclassifier_2ecpp_0',['KNNClassifier.cpp',['../KNNClassifier_8cpp.html',1,'']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['utils_0',['Utils',['../namespaceUtils.html',1,'']]],
-  ['utils_2ecpp_1',['Utils.cpp',['../Utils_8cpp.html',1,'']]]
+  ['tolowercase_0',['toLowerCase',['../DataLoader_8cpp.html#ad8200839a864ebdf2f129fbffa33967b',1,'DataLoader.cpp']]]
 ];

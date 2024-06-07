@@ -1,4 +1,4 @@
-# Metaheurísticas - Práctica 2
+# Metaheurísticas - Práctica 3
 
 Este proyecto implementa y evalúa diversas metaheurísticas utilizando validación cruzada de 5 particiones (5CV) para su análisis y comparación. En particular, se evaluan los desempeños de los algoritmos de Búsqueda Aleatoria, RELIEF y Búsqueda Local, además de diversas versiones de algoritmos genéticos y meméticos, en el conocido problema de Apredizaje de Pesos en Características (APC). Nosotros emplearemos la generación de pesos para el algoritmo de clasificación del vecino más cercano (1NN). Los conjuntos de datos utilizados para la evaluación son `breast-cancer`, `ecoli` y `parkinsons`.
 
@@ -41,7 +41,7 @@ El programa acepta parámetros de la siguiente manera:
 
 El orden de los parámetros no importa, pero los valores de los parámetros deben ser especificados en el formato `--param1=value1`. Si bien ninguno de los parámetros es obligatorio, el comportamiento del programa difiere según los parámetros especificados. A continuación, se describen los parámetros admitidos:
 
-1. `--algorithm`: Nombre del algoritmo a ejecutar. Los valores posibles son `1nn`, `relief`, `local-search`,  `best-local-search`, `age-ca`, `age-blx`, `agg-ca`, `agg-blx`, `memetic` o `memetic-restart`.
+1. `--algorithm`: Nombre del algoritmo a ejecutar. Los valores posibles son `1nn`, `relief`, `local-search`,  `best-local-search`, `age-ca`, `age-blx`, `agg-ca`, `agg-blx`, `memetic`, `memetic-restart`, `bmb`, `sa`, `ils`, o`ils-sa`.
 2. `--dataset`: Nombre del conjunto de datos a utilizar. Los valores posibles son `breast-cancer`, `ecoli` y `parkinsons`.
 3. `--seed`: Valor de la semilla a utilizar para la generación de números aleatorios.
 4. `--log`: Opción para registrar los resultados de la ejecución.
@@ -64,9 +64,29 @@ La implementación alternativa de Búsqueda local admite los mismos parámetros 
 - `crossoverRate`: Probabilidad de cruce. Por defecto 1, 0.
 - `mutationRate`: Probabilidad de mutación. Por defecto 0, 08.
 
-Finalmente, `memetic` y `memetic-restart` aceptan:
+Los algoritmos `memetic` y `memetic-restart` aceptan:
 
 - `maxEvaluations`: Número máximo de evaluaciones de la función objetivo. Por defecto 15000.
 - `optimizationFrequency`: Frecuencia en generaciones (que no evaluaciones) de optimización. Por defecto 10.
 - `selectionRate`: Porcentaje de la población a optimizar. Por defecto 0, 1.
 - `elitismRate`: Porcentaje de la selección a optimizar que debe ser de los mejores. Por defecto 0, 0.
+
+El algoritmo`bmb` acepta:
+
+- `maxEvaluations`: Número máximo de evaluaciones. Por defecto: 750.
+- `maxIterations`: Número máximo de iteraciones. Por defecto: 20.
+
+El algoritmo `sa` acepta:
+
+- `maxEvaluations`: Número máximo de evaluaciones. Por defecto: 15000.
+- `finalTemperature`: Temperatura final. Por defecto: 0.001.
+- `acceptanceProbability`: Probabilidad de aceptar soluciones peores. Por defecto: 0.3.
+- `worseningProbability`: Probabilidad de empeoramiento. Por defecto: 0.1.
+
+Finalmente, los algoritmos `ils` e `ils-sa` aceptan:
+
+- `maxEvaluations`: Número máximo de evaluaciones. Por defecto: 750.
+- `maxIterations`: Número máximo de iteraciones. Por defecto: 20.
+
+  - `mutationLimit`: Límite de mutación. Por defecto: 0.25.
+
