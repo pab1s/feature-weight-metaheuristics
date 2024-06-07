@@ -15,7 +15,7 @@ EvaluatedSolution BMB::run(const DataSet& dataset) {
 
     for (size_t i = 0; i < maxIterations; ++i) {
         Solution currentSolution(n);
-        EvaluatedSolution currentEvaluated = ls->run(currentSolution, dataset);
+        EvaluatedSolution currentEvaluated = ls->runTrayectories(currentSolution, dataset);
         eval->insertFitnessRecord(bestFitness);
 
         if (currentEvaluated.fitness > bestFitness) {

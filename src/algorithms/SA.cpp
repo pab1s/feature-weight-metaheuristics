@@ -13,7 +13,7 @@ Solution SA::generateNeighbor(const Solution& solution) {
     Solution neighbor = solution;
     size_t n = solution.size();
     size_t index = RandomUtils::getRandomInt(0, n - 1);
-    neighbor.weights.at(index) += RandomUtils::getRandomNormal(0.0f, 0.1f);
+    neighbor.weights.at(index) += RandomUtils::getRandomNormal(0.0f, std::sqrt(0.3f));
     neighbor.weights.at(index) = std::clamp(neighbor.weights.at(index), 0.0f, 1.0f);
     return neighbor;
 }
@@ -45,7 +45,7 @@ EvaluatedSolution SA::run(const Solution& initialSolution, const DataSet& datase
     size_t numEvaluations = 0;
     bool continueSearch = true;
 
-    for (size_t i = 0; i < M && continueSearch; ++i) {
+    while (evaluations < maxEvaluations && continueSearch) {
         eval->insertFitnessRecord(bestFitness);
         size_t numSuccess = 0;
         size_t numNeighbors = 0;

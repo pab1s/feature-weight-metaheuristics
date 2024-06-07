@@ -10,11 +10,9 @@ Solution ILS::mutate(const Solution& solution, size_t t) {
     size_t n = solution.size();
     Solution mutated = solution;
 
-    // Select t random indices
     std::vector<size_t> indices = RandomUtils::generateShuffledIndices(n);
     indices.resize(t);
 
-    // Modify the weights at the selected indices
     for (size_t i = 0; i < t; ++i) {
         size_t index = indices[i];
         mutated.weights.at(index) += RandomUtils::getRandomFloat(-mutationLimit, mutationLimit);
@@ -32,7 +30,7 @@ EvaluatedSolution ILS::run(const DataSet& dataset) {
 
     for (size_t i = 0; i < maxIterations; ++i) {
         Solution mutated = mutate(currentSolution, t);
-        EvaluatedSolution evaluated = ls->run(mutated, dataset);
+        EvaluatedSolution evaluated = ls->runTrayectories(mutated, dataset);
 
         if (evaluated.fitness > currentFitness) {
             currentSolution = evaluated.solution;
