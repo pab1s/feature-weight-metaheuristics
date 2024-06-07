@@ -105,11 +105,11 @@ std::unique_ptr<Algorithm> AlgorithmFactory::createAlgorithm(
         size_t maxEvaluations = parameters.find("maxEvaluations") != parameters.end() ? static_cast<size_t>(parameters.at("maxEvaluations")) : defaultMaxEvaluations;
         size_t maxIterations = parameters.find("maxIterations") != parameters.end() ? static_cast<size_t>(parameters.at("maxIterations")) : defaultMaxIterations;
         
-        std::shared_ptr<LocalSearch> ls = std::make_shared<LocalSearch>(eval, 1, maxEvaluations, 0.0, 0.3);
+        std::shared_ptr<LocalSearch> ls = std::make_shared<LocalSearch>(eval, 2, maxEvaluations, 0.0, 0.3);
 
         return std::make_unique<BMB>(eval, ls, maxIterations);
     } else if (name == "sa") {
-        size_t defaultMaxEvaluations = 750;
+        size_t defaultMaxEvaluations = 15000;
         float defaultFinalTemperature = 0.001f;
         float defaultAcceptanceProbability = 0.3f;
         float defaultWorseningProbability = 0.1f;
@@ -129,7 +129,7 @@ std::unique_ptr<Algorithm> AlgorithmFactory::createAlgorithm(
         size_t maxIterations = parameters.find("maxIterations") != parameters.end() ? static_cast<size_t>(parameters.at("maxIterations")) : defaultMaxIterations;
         float mutationLimit = parameters.find("mutationLimit") != parameters.end() ? parameters.at("mutationLimit") : defaultMutationLimit;
 
-        std::shared_ptr<LocalSearch> ls = std::make_shared<LocalSearch>(eval, 1, maxEvaluations, 0.0, 0.3);
+        std::shared_ptr<LocalSearch> ls = std::make_shared<LocalSearch>(eval, 2, maxEvaluations, 0.0, 0.3);
 
         return std::make_unique<ILS>(eval, ls, maxIterations, mutationLimit);
     } else if (name == "ils-sa") {

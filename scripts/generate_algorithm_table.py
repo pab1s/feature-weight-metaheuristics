@@ -7,9 +7,9 @@ def format_value(value, is_time=False):
         return "{:.2f}".format(value)
 
 filenames = [
-    'ecoli_memetic-restart_2024-05-15_19-08-09.csv',
-    'parkinsons_memetic-restart_2024-05-15_19-08-42.csv',
-    'breast-cancer_memetic-restart_2024-05-15_19-09-05.csv'
+    'ecoli_ils-sa_2024-05-30_17-13-00.csv',
+    'parkinsons_ils-sa_2024-05-30_17-13-33.csv',
+    'breast-cancer_ils-sa_2024-05-30_17-13-53.csv'
 ]
 
 dataset_names = ['Ecoli', 'Parkinsons', 'Breast-cancer']
