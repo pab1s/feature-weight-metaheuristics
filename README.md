@@ -1,92 +1,128 @@
-# Metaheurísticas - Práctica 3
+# Metaheuristics Weight Finding Project
 
-Este proyecto implementa y evalúa diversas metaheurísticas utilizando validación cruzada de 5 particiones (5CV) para su análisis y comparación. En particular, se evaluan los desempeños de los algoritmos de Búsqueda Aleatoria, RELIEF y Búsqueda Local, además de diversas versiones de algoritmos genéticos y meméticos, en el conocido problema de Apredizaje de Pesos en Características (APC). Nosotros emplearemos la generación de pesos para el algoritmo de clasificación del vecino más cercano (1NN). Los conjuntos de datos utilizados para la evaluación son `breast-cancer`, `ecoli` y `parkinsons`.
+## Overview
 
-## Estructura del Directorio
+This project implements and evaluates various metaheuristic algorithms for weight finding in machine learning models, particularly for the Feature Weight Learning (FWL) problem. It includes a range of algorithms from simple local search methods to more complex population-based approaches, designed to optimize feature selection and weight assignment in classification tasks. The project uses 5-fold cross-validation (5CV) for analysis and comparison, focusing on weight generation for the 1-Nearest Neighbor (1NN) classification algorithm.
 
-El proyecto está estructurado de la siguiente manera:
+**NOTE**: The report is written in Spanish.
 
-- `/bin`: Contiene el ejecutable `metaheuristics` del proyecto.
-- `/data`: Incluye los ficheros de datos ARFF para los conjuntos de datos de breast-cancer, ecoli y parkinsons, así como las tablas APC para el año 2023-24.
-- `/docs`: Documentación relacionada, incluyendo el guion del proyecto.
-- `/include`: Cabeceras de clases y utilidades empleadas en el proyecto.
-- `/obj`: Objetos compilados del proyecto.
-- `/outputs`: Resultados de ejecución, soluciones generadas y registros de fitness durante el entrenamiento.
-- `/scripts`: Scripts útiles como `run.sh` para la ejecución y `generate_training_fitness_table.py` para la generación de gráficos.
-- `/src`: Código fuente del proyecto.
-- `/tests`: Pruebas unitarias y mocks utilizados para testing.
-- `Makefile`: Archivo para la compilación del proyecto.
+## Project Structure
 
-## Compilación y Ejecución
-
-Para compilar el proyecto, utiliza el comando `make` en la raíz del proyecto. Esto generará el ejecutable en `/bin`.
-
-Para ejecutar el programa, utiliza el script `run.sh` proporcionado en `/scripts`, especificando los parámetros deseados, por ejemplo:
-
-```shell
-./scripts/run.sh --algorithm=local-search --dataset=ecoli --seed=123 --log
+```
+.
+├── bin/                  # Compiled binaries (contains metaheuristics executable)
+├── data/                 # ARFF data files and FWL tables for 2023-24
+├── docs/                 # Documentation
+│   ├── html/             # Doxygen-generated HTML docs
+│   └── latex/            # Doxygen-generated LaTeX docs
+├── include/              # Header files
+│   ├── algorithms/       # Algorithm-specific headers
+│   └── utils/            # Utility headers
+├── obj/                  # Compiled object files
+├── outputs/              # Execution results, generated solutions, and training fitness logs
+├── scripts/              # Utility scripts (including run.sh and generate_training_fitness_table.py)
+├── src/                  # Source files
+│   ├── algorithms/       # Algorithm implementations
+│   └── utils/            # Utility implementations
+├── tests/                # Unit tests and mocks
+└── Makefile              # Project compilation instructions
 ```
 
-Esto ejecutará el algoritmo de Búsqueda Local en el conjunto de datos de ecoli con una semilla de 123, registrando los resultados.
+## Datasets
 
-## Parámetros de Ejecución
+The project evaluates the algorithms using three datasets:
+- breast-cancer
+- ecoli
+- parkinsons
 
-Los programas admiten varios parámetros para personalizar la ejecución, incluidos el algoritmo, el conjunto de datos, la semilla, la opción de registro y diversas combinaciones de parámetros en función de la ejecución deseada.
+## Algorithms Implemented
 
-El programa acepta parámetros de la siguiente manera:
+### Local Search Methods
+1. **Local Search**
+2. **Best Local Search (BLS)**
+3. **Simulated Annealing (SA)**
+4. **Iterated Local Search (ILS)**
+5. **ILS with SA (OILS-SA)**
 
-```shell
-./scripts/run.sh [--algorithm=ALGORITHM_NAME [--param1=value1 ...]] [--dataset=DATASET_NAME] [--seed=SEED_VALUE] [--log]
+### Population-based Methods
+6. **Genetic Algorithm (GA)**
+   - AGE-CA: Steady-state GA with arithmetic crossover
+   - AGE-BLX: Steady-state GA with BLX-α crossover
+   - AGG-CA: Generational GA with arithmetic crossover
+   - AGG-BLX: Generational GA with BLX-α crossover
+7. **Memetic Algorithm (MA)**
+8. **MA with Restart**
+9. **BMB (Baldwinian MA)**
+
+### Other Methods
+10. **1-Nearest Neighbor (1NN)**
+11. **Relief**
+12. **Random Search**
+
+## Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/pab1s/attribute-weight-metaheuristics.git
+   cd mattribute-weight-metaheuristics
+   ```
+2. Compile the project:
+   ```
+   make
+   ```
+
+## Usage
+
+Run the compiled binary with appropriate arguments:
+```
+./scripts/run.sh [options]
 ```
 
-El orden de los parámetros no importa, pero los valores de los parámetros deben ser especificados en el formato `--param1=value1`. Si bien ninguno de los parámetros es obligatorio, el comportamiento del programa difiere según los parámetros especificados. A continuación, se describen los parámetros admitidos:
+### Execution Parameters
 
-1. `--algorithm`: Nombre del algoritmo a ejecutar. Los valores posibles son `1nn`, `relief`, `local-search`,  `best-local-search`, `age-ca`, `age-blx`, `agg-ca`, `agg-blx`, `memetic`, `memetic-restart`, `bmb`, `sa`, `ils`, o`ils-sa`.
-2. `--dataset`: Nombre del conjunto de datos a utilizar. Los valores posibles son `breast-cancer`, `ecoli` y `parkinsons`.
-3. `--seed`: Valor de la semilla a utilizar para la generación de números aleatorios.
-4. `--log`: Opción para registrar los resultados de la ejecución.
-5. `--param1=value1 ...`: Parámetros adicionales específicos del algoritmo a ejecutar. Consulta la documentación de cada algoritmo para obtener más información.
+The program accepts the following parameters:
 
-La ejecución del programa sin parámetros ejecutará la validación cruzada de 5 particiones para los algoritmos de Búsqueda Aleatoria, RELIEF y Búsqueda Local en los conjuntos de datos de `breast-cancer`, `ecoli` y `parkinsons`. El programa mostrará un mensaje de confirmación para confirmar la ejecución. En caso de que no se especifique el conjunto de datos, el programa ejecutará la validación cruzada para todos los conjuntos de datos disponibles. De manera similar, si no se especifica el algoritmo, el programa ejecutará la validación cruzada para todos los algoritmos disponibles. En caso de que no se especifique la semilla, el programa utilizará una semilla aleatoria obtenida entre 0 y 1000.
+- `--algorithm=ALGORITHM_NAME`: Specifies the algorithm to run (e.g., local-search, age-ca, memetic)
+- `--dataset=DATASET_NAME`: Specifies the dataset to use (breast-cancer, ecoli, or parkinsons)
+- `--seed=SEED_VALUE`: Sets the random seed
+- `--log`: Enables logging of execution results
 
-En cuanto a los parámetros adicionales, de momento tan solo el algoritmo de Búsqueda Local los admite. Para este algoritmo, se pueden especificar los siguientes parámetros:
+Additional algorithm-specific parameters can be specified. For example:
 
-- `--maxEvaluations`: Número máximo de evaluaciones a realizar. Por defecto, su valor es 15000.
-- `--maxNeighbors`: Número máximo de vecinos a explorar en cada iteración. Por defecto, su valor es 20.
-- `--variance`: Varianza de la distribución normal para la generación de vecinos. Por defecto, su valor es 0'3.
+- Local Search:
+  - `--maxEvaluations`: Maximum number of evaluations (default: 15000)
+  - `--maxNeighbors`: Maximum number of neighbors to explore per iteration (default: 20)
+  - `--variance`: Variance for the normal distribution in neighbor generation (default: 0.3)
 
-La implementación alternativa de Búsqueda local admite los mismos parámetros que la implementación original.
+- Genetic Algorithms:
+  - `--maxEvaluations`: Maximum number of objective function evaluations (default: 15000)
+  - `--populationSize`: Population size (default: 50)
+  - `--crossoverRate`: Crossover probability (default: 1.0)
+  - `--mutationRate`: Mutation probability (default: 0.08)
 
-- Por su lado, cualquier instancia de una clase hija de `GeneticAlgortihm` acepta los siguientes
-  parámetros:
-  `maxEvaluations`: Número máximo de evaluaciones de la función objetivo. Por defecto 15000.
-- `populationSize`: Tamaño de la población. Por defecto 50.
-- `crossoverRate`: Probabilidad de cruce. Por defecto 1, 0.
-- `mutationRate`: Probabilidad de mutación. Por defecto 0, 08.
+For specific usage instructions and parameters for each algorithm, please refer to the documentation in the `docs/` directory.
 
-Los algoritmos `memetic` y `memetic-restart` aceptan:
+## Scripts
 
-- `maxEvaluations`: Número máximo de evaluaciones de la función objetivo. Por defecto 15000.
-- `optimizationFrequency`: Frecuencia en generaciones (que no evaluaciones) de optimización. Por defecto 10.
-- `selectionRate`: Porcentaje de la población a optimizar. Por defecto 0, 1.
-- `elitismRate`: Porcentaje de la selección a optimizar que debe ser de los mejores. Por defecto 0, 0.
+The `scripts/` directory contains useful scripts:
+- `run.sh`: Main execution script
+- `generate_training_fitness_table.py`: Generates performance graphs
 
-El algoritmo`bmb` acepta:
+To run the main experiment script:
+```
+./scripts/run.sh
+```
 
-- `maxEvaluations`: Número máximo de evaluaciones. Por defecto: 750.
-- `maxIterations`: Número máximo de iteraciones. Por defecto: 20.
+## Documentation
 
-El algoritmo `sa` acepta:
+This project uses Doxygen for documentation. To generate the documentation:
+1. Ensure you have Doxygen installed.
+2. Run:
+   ```
+   doxygen config.doxy
+   ```
+3. Access the generated documentation in `docs/html/index.html` or `docs/latex/refman.pdf`.
 
-- `maxEvaluations`: Número máximo de evaluaciones. Por defecto: 15000.
-- `finalTemperature`: Temperatura final. Por defecto: 0.001.
-- `acceptanceProbability`: Probabilidad de aceptar soluciones peores. Por defecto: 0.3.
-- `worseningProbability`: Probabilidad de empeoramiento. Por defecto: 0.1.
+## Contact
 
-Finalmente, los algoritmos `ils` e `ils-sa` aceptan:
-
-- `maxEvaluations`: Número máximo de evaluaciones. Por defecto: 750.
-- `maxIterations`: Número máximo de iteraciones. Por defecto: 20.
-
-  - `mutationLimit`: Límite de mutación. Por defecto: 0.25.
-
+Pablo Olivares Martínez - pablolivares1502@gmail.com
