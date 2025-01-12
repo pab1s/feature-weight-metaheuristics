@@ -2,7 +2,7 @@
 
 # Define the valid datasets and algorithms
 datasets="ecoli parkinsons breast-cancer"
-algorithms="1nn relief local-search best-local-search age-ca age-blx agg-ca agg-blx memetic memetic-restart bmb sa ils ils-sa"
+algorithms="1nn relief local-search best-local-search age-ca age-blx agg-ca agg-blx memetic memetic-restart bmb sa ils ils-sa cmaes"
 
 # Function to verify if the value is a valid dataset
 is_valid_dataset() {

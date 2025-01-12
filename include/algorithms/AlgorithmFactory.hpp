@@ -1,5 +1,16 @@
 #pragma once
 #include "algorithms/Algorithm.hpp"
+#include "algorithms/LocalSearch.hpp"
+#include "algorithms/BestLocalSearch.hpp"
+#include "algorithms/Relief.hpp"
+#include "algorithms/MA.hpp"
+#include "algorithms/MA-restart.hpp"
+#include "algorithms/BMB.hpp"
+#include "algorithms/CMAES.hpp"
+#include "algorithms/ILS_SA.hpp"
+#include "algorithms/SA.hpp"
+#include "algorithms/GGA_AC.hpp"
+#include "algorithms/SGA_AC.hpp"
 
 class AlgorithmFactory {
    public:

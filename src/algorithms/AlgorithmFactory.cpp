@@ -17,6 +17,7 @@
 #include "algorithms/SA.hpp"
 #include "algorithms/ILS.hpp"
 #include "algorithms/ILS_SA.hpp"
+#include "algorithms/CMAES.hpp"
 
 std::unique_ptr<Algorithm> AlgorithmFactory::createAlgorithm(
     const std::string& name, 
@@ -144,6 +145,16 @@ std::unique_ptr<Algorithm> AlgorithmFactory::createAlgorithm(
         std::shared_ptr<SA> sa = std::make_shared<SA>(eval, maxEvaluations, 0.001f, 0.3f, 0.1f);
 
         return std::make_unique<ILSSA>(eval, sa, maxIterations, mutationLimit);
+    } else if (name == "cmaes") {
+        size_t defaultMaxEvaluations = 15000;
+        size_t defaultLambda = 0;  // 0 means default (4 + floor(3*ln(N)))
+
+        size_t maxEvaluations = parameters.find("maxEvaluations") != parameters.end() ? 
+            static_cast<size_t>(parameters.at("maxEvaluations")) : defaultMaxEvaluations;
+        size_t lambda = parameters.find("lambda") != parameters.end() ? 
+            static_cast<size_t>(parameters.at("lambda")) : defaultLambda;
+
+        return std::make_unique<CMAES>(eval, maxEvaluations, lambda);
     }
 
     return nullptr;

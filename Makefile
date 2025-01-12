@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -Wall -g -Iinclude -I/usr/src/googletest/googletest/include -fopenmp
+CXXFLAGS = -Wall -g -Iinclude -I/usr/src/googletest/googletest/include -I/usr/include/eigen3 -fopenmp -O3
 LDFLAGS = -fopenmp
 
 # Profile and Debug options
