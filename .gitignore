@@ -1,5 +1,6 @@
-data/
+data/*.arff
 outputs/
 obj/
+bin/
 vgcore*
 profile.txt
