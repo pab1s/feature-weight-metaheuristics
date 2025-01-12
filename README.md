@@ -42,7 +42,7 @@ The project evaluates the algorithms using three datasets:
 2. **Best Local Search (BLS)**
 3. **Simulated Annealing (SA)**
 4. **Iterated Local Search (ILS)**
-5. **ILS with SA (OILS-SA)**
+5. **ILS with SA (ILS-SA)**
 
 ### Population-based Methods
 6. **Genetic Algorithm (GA)**
